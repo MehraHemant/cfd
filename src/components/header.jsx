@@ -109,7 +109,7 @@ export function Header() {
           href="/#contact-us"
           className={twMerge("", hash === "#contact-us" ? "selected" : "")}
         >
-          Let's Connect
+          Let&apos;s Connect
         </Link>
       </div>
     </header>

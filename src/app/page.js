@@ -239,7 +239,7 @@ export default function Home() {
             Ready to take your brand on the move?
           </h5>
           <h5 className="pt-4 text-lg/5 max-sm:pt-2 max-sm:text-base/4">
-            Let's connect and make it happen!
+            Let&apos;s connect and make it happen!
           </h5>
         </div>
         <form className="bg-primary mx-auto flex max-w-lg flex-col gap-4 px-8 py-12 text-black max-md:px-8 max-sm:px-3 max-sm:text-sm">

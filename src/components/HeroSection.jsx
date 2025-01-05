@@ -8,7 +8,7 @@ export function HeroSection() {
         engaging and more meaningful ideas to interact with the target audience
         and connect them with the brand in a more realistic way
         <span className="font-semibold italic max-md:text-lg max-sm:text-base">
-          "We plan for Planes to Take off"
+          We plan for Planes to Take off
         </span>
       </h4>
       <h3 className="mt-6 text-center text-4xl font-bold max-md:mt-3 max-md:text-xl max-sm:mt-2 max-sm:text-lg">
