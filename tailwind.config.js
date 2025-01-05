@@ -7,11 +7,20 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      screen:{
+        '7xl': '1940px',
       },
-    },
+      colors: {
+        primary: '#CD0159',
+        secondary: '#FF92C9'
+      },
+      fontFamily: {
+        'rubik-dirt': ['"Rubik Dirt"'],
+        'didact': ['"Didact Gothic"'],
+        'body': ['Montserrat', 'sans'],
+        'sans': ['Montserrat', 'sans']
+      }
+    }
   },
   plugins: [],
 };

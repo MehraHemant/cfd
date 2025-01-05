@@ -1,27 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Lexend+Deca&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+* {
+    scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.font-rubik {
+    font-family: "Rubik Dirt", system-ui;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.font-didact {
+    font-family: "Didact Gothic", system-ui;
 }
+
+.across {
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
+}
+
+.rev-across {
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.shadow-2 {
+    box-shadow: 8px 10px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-3 {
+    box-shadow: 10px -10px #FF92C9;
+    &:hover {
+        box-shadow: 5px -5px #FF92C9;
+    }
+    transition: all 0.1s linear;
+}
+
+.drop-1 {
+    text-shadow: 3px 3px black;
+}
+
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .selected {
+    @apply border-b border-black underline-offset-2;
+  }
+  .team-member-card {
+    @apply flex flex-col flex-none max-w-sm items-center w-full px-4 py-5 bg-black/25;
+  }
+  .heading {
+    @apply pt-3 text-5xl w-fit mx-auto font-extrabold uppercase max-lg:text-4xl max-lg:font-bold max-md:text-3xl max-md:font-extrabold max-sm:text-xl/5;
+  }
+  .avatar {
+    @apply w-40 h-40 rounded-full bg-white;
+  }
+  .card-heading {
+    @apply text-4xl font-semibold max-md:text-2xl/10 max-sm:text-xl/6 uppercase;
+  }
+  .card-desc {
+    @apply px-3 text-center text-lg max-sm:text-base/5;
+  }
+  .primary-btn {
+    @apply uppercase border-2 hover:bg-[#FF92C9] hover:border-white hover:shadow-2xl w-fit px-3 py-2 tracking-widest font-semibold flex items-center gap-3 duration-300 transition-all ease-in-out;
+  }
+  .input-field {
+    @apply bg-secondary border-primary placeholder:text-primary/60 w-full rounded-lg px-3 py-2 outline-none max-sm:bg-secondary/20 max-sm:rounded-none max-sm:border-b max-sm:border-secondary max-sm:placeholder:text-secondary;
+  }
+  .case-study-card {
+    @apply w-56 min-w-56 max-md:text-sm text-nowrap bg-white py-1 text-center text-base font-medium uppercase;
   }
 }
