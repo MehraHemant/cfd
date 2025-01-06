@@ -48,7 +48,8 @@ export function Header() {
               "cursor-pointer pt-0",
               path == "/btlServices" ||
                 path == "/atlServices" ||
-                path == "/dmServices"
+                path == "/dmServices" ||
+                path == "/about"
                 ? "selected"
                 : ""
             )}
@@ -64,9 +65,9 @@ export function Header() {
               isHidden ? "hidden" : "flex"
             )}
           >
-             <Link
+            <Link
               onClick={() => setIsHidden((prev) => !prev)}
-              href="/btlServices"
+              href="/about"
               className={twMerge(
                 "hover:bg-secondary text-nowrap px-4 py-3",
                 path == "/about" ? "selected" : ""

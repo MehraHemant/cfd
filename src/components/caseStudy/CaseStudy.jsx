@@ -28,7 +28,7 @@ export function CaseStudy() {
       <Heading title={"case study"} primary />
       <div
         id="slider"
-        className="py-6 flex w-full items-center justify-center gap-4"
+        className="py-6 flex w-full items-center justify-center gap-4 max-sm:gap-2"
       >
         <img
           id="prev"
