@@ -64,6 +64,16 @@ export function Header() {
               isHidden ? "hidden" : "flex"
             )}
           >
+             <Link
+              onClick={() => setIsHidden((prev) => !prev)}
+              href="/btlServices"
+              className={twMerge(
+                "hover:bg-secondary text-nowrap px-4 py-3",
+                path == "/about" ? "selected" : ""
+              )}
+            >
+              CFD
+            </Link>
             <Link
               onClick={() => setIsHidden((prev) => !prev)}
               href="/btlServices"
