@@ -32,7 +32,7 @@ export const atlServicesData = [
       "At Vistaar Media, we offer the best FM Advertising (Radio Ads) services. Our enthusiastic and innovative team is dedicated to crafting 'Magical' radio ads that resonate with audiences. By weaving memorable stories, we help create an unforgettable brand image that stays in the minds of listeners. Let us transform your advertising vision into reality.",
   },
   {
-    imgSrc: "./images/services/bus-branding-service-500x500.jpg.webp",
+    imgSrc: "./images/services/bus-branding-service-500x500.jpg",
     imgAlt: "bus wrapping",
     title: "bus wrapping",
     subtitle: "",

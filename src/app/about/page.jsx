@@ -12,7 +12,7 @@ export const metadata = {
 };
 
 export default function About() {
-  const slides = ["/images/store_view.jpg"];
+  const slides = ["/images/store_view.jpg", "/images/Presentation.jpg", "/images/Presentation (1).jpg"];
   return (
     <>
       <section className="bg-primary pt-4">
@@ -23,7 +23,7 @@ export default function About() {
       <section>
         <Heading title={"Store Inside View"} primary />
         <div className="px-10">
-          <Carousel slides={slides} />
+          <Carousel slides={slides} intervalTime={3000} />
         </div>
       </section>
       <Polygon reverse className={"bg-white"} />

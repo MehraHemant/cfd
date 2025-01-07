@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 
 
-export function Carousel({slides}) {
+export function Carousel({slides, intervalTime = 5000}) {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -25,7 +25,7 @@ export function Carousel({slides}) {
   useEffect(() => {
     const interval = setInterval(() => {
       goToNext();
-    }, 5000); // Change slide every 5 seconds
+    }, intervalTime); // Change slide every 5 seconds
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
@@ -35,7 +35,7 @@ export function Carousel({slides}) {
         <img
           src={slides[currentIndex]}
           alt={`Slide ${currentIndex + 1}`}
-          className="w-full aspect-[5/2] max-sm:aspect-[5/3] object-cover transition duration-700 ease-in-out"
+          className="w-full aspect-[5/2] max-sm:aspect-[5/3] object-cover object-center transition duration-700 ease-in-out"
         />
       </div>
 

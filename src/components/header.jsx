@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 export function Header() {
@@ -16,6 +16,20 @@ export function Header() {
     const newHash = window.location.hash;
     setHash(newHash);
   });
+
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const handleOutSideClick = (event) => {
+      if (!ref.current?.contains(event.target)) {
+        !isHidden && setIsHidden(true);
+      }
+    };
+    window.addEventListener("mousedown", handleOutSideClick);
+    return () => {
+      window.removeEventListener("mousedown", handleOutSideClick);
+    };
+  }, [isHidden]);
   return (
     <header className="sticky top-0 z-50 bg-white/80 drop-shadow-xl backdrop-blur-3xl">
       <div className="relative flex h-20 min-h-16 w-full justify-center bg-white">
@@ -64,13 +78,14 @@ export function Header() {
               "absolute top-7 z-10 flex-col bg-white/90 text-black shadow-lg *:border-b max-sm:top-6",
               isHidden ? "hidden" : "flex"
             )}
+            ref={ref}
           >
             <Link
               onClick={() => setIsHidden((prev) => !prev)}
               href="/about"
               className={twMerge(
                 "hover:bg-secondary text-nowrap px-4 py-3",
-                path == "/about" ? "selected" : ""
+                path == "/about" ? "bg-gray-200" : ""
               )}
             >
               CFD
@@ -80,7 +95,7 @@ export function Header() {
               href="/btlServices"
               className={twMerge(
                 "hover:bg-secondary text-nowrap px-4 py-3",
-                path == "/btlServies" ? "selected" : ""
+                path == "/btlServies" ? "bg-gray-200" : ""
               )}
             >
               BTL Services
@@ -90,7 +105,7 @@ export function Header() {
               href="/dmServices"
               className={twMerge(
                 "hover:bg-secondary text-nowrap px-4 py-3",
-                path == "/dmServices" ? "selected" : ""
+                path == "/dmServices" ? "bg-gray-200" : ""
               )}
             >
               Digital Marketing Services
@@ -100,7 +115,7 @@ export function Header() {
               href="/atlServices"
               className={twMerge(
                 "hover:bg-secondary text-nowrap px-4 py-3",
-                path == "/atlServices" ? "selected" : ""
+                path == "/atlServices" ? "bg-gray-200" : ""
               )}
             >
               ATL Services

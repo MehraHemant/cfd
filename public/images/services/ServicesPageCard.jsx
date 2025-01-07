@@ -12,12 +12,12 @@ export function ServicePageCard({
   return (
     <div
       className={twMerge(
-        "mx-auto flex max-w-7xl items-center py-6",
+        "mx-auto flex max-w-7xl items-center py-3",
         rev ? "flex-row-reverse  max-lg:flex-col" : "max-lg:flex-col flex-row"
       )}
     >
       <div className="max-w-xl w-full p-8 max-lg:p-6">
-        <img src={imgSrc} className="aspect-video object-cover" alt={imgAlt} />
+        <img src={imgSrc} className="aspect-video object-cover object-top" alt={imgAlt} />
       </div>
       <div className="col-span-2 w-full text-center">
         <div className="mb-2 flex flex-col items-center gap-2 max-lg:gap-2 max-md:gap-1">

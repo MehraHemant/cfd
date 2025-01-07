@@ -1,4 +1,4 @@
-import { ServicePageCard } from "@/components/ServicesPageCard";
+import { ServicePageCard } from "../../../public/images/services/ServicesPageCard";
 import { btlServicesData } from "@/data/btlServices";
 
 export const metadata = {

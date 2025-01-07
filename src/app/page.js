@@ -6,6 +6,7 @@ import { ServiceCard } from "@/components/service";
 import { TeamCard } from "@/components/teams/TeamCard";
 import { Polygon } from "@/components/ui/polygon";
 import { teamMembers } from "@/data/teamMembers";
+// import { DoubleQuotesIcon } from "@/icons/DoubleQuotesIcon";
 import { useState } from "react";
 
 export default function Home() {
@@ -47,64 +48,66 @@ export default function Home() {
       <Polygon reverse />
 
       {/* <!-- TEAM section --> */}
-      <section className="bg-primary px-40 py-10 max-lg:px-10 max-md:px-2">
+      <section className="bg-primary px-36 py-10 max-lg:px-8 max-md:px-1">
         <div className="flex flex-col items-center gap-3 pb-6 max-lg:gap-2 max-md:gap-1">
           <Heading title={"Teams"} />
-          <div className="flex w-full gap-x-4 relative overflow-hidden justify-center px-4 py-2 max-sm:gap-x-2">
+          <div className="relative px-10 max-md:px-4 w-full">
             <button
-              className="absolute rounded-full aspect-square text-white bg-black/30 px-2 text-2xl z-10 align-middle left-5 top-1/2 -translate-y-1/2 cursor-pointer"
+              className="absolute rounded-full aspect-square text-black bg-white/60 px-2 text-2xl z-10 align-middle left-0 top-1/2 -translate-y-1/2 cursor-pointer"
               onClick={onLeftClick}
             >
               &lt;
             </button>
             <button
-              className="absolute rounded-full aspect-square text-white bg-black/30 px-2 text-2xl z-10 align-middle right-5 top-1/2 -translate-y-1/2 cursor-pointer"
+              className="absolute rounded-full aspect-square text-black bg-white/60 px-2 text-2xl z-10 align-middle right-0 top-1/2 -translate-y-1/2 cursor-pointer"
               onClick={onRightClick}
             >
               &gt;
             </button>
-            {currentIndex === 0 ? (
+            <div className="flex w-full gap-x-4 max-md:gap-x-2 relative overflow-hidden justify-center px-4 py-2">
+              {currentIndex === 0 ? (
+                <TeamCard
+                  title={teamMembers[teamLength].title}
+                  description={teamMembers[teamLength].description}
+                  image={teamMembers[teamLength].image}
+                  alt={teamMembers[teamLength].alt}
+                  subtitle={teamMembers[teamLength].subtitle}
+                />
+              ) : (
+                <TeamCard
+                  title={teamMembers[currentIndex - 1].title}
+                  description={teamMembers[currentIndex - 1].description}
+                  image={teamMembers[currentIndex - 1].image}
+                  alt={teamMembers[currentIndex - 1].alt}
+                  subtitle={teamMembers[currentIndex - 1].subtitle}
+                />
+              )}
               <TeamCard
-                title={teamMembers[teamLength].title}
-                description={teamMembers[teamLength].description}
-                image={teamMembers[teamLength].image}
-                alt={teamMembers[teamLength].alt}
-                subtitle={teamMembers[teamLength].subtitle}
+                active
+                title={teamMembers[currentIndex].title}
+                description={teamMembers[currentIndex].description}
+                image={teamMembers[currentIndex].image}
+                alt={teamMembers[currentIndex].alt}
+                subtitle={teamMembers[currentIndex].subtitle}
               />
-            ) : (
-              <TeamCard
-                title={teamMembers[currentIndex - 1].title}
-                description={teamMembers[currentIndex - 1].description}
-                image={teamMembers[currentIndex - 1].image}
-                alt={teamMembers[currentIndex - 1].alt}
-                subtitle={teamMembers[currentIndex - 1].subtitle}
-              />
-            )}
-            <TeamCard
-              active
-              title={teamMembers[currentIndex].title}
-              description={teamMembers[currentIndex].description}
-              image={teamMembers[currentIndex].image}
-              alt={teamMembers[currentIndex].alt}
-              subtitle={teamMembers[currentIndex].subtitle}
-            />
-            {currentIndex === teamLength ? (
-              <TeamCard
-                title={teamMembers[0].title}
-                description={teamMembers[0].description}
-                image={teamMembers[0].image}
-                alt={teamMembers[0].alt}
-                subtitle={teamMembers[0].subtitle}
-              />
-            ) : (
-              <TeamCard
-                title={teamMembers[currentIndex + 1].title}
-                description={teamMembers[currentIndex + 1].description}
-                image={teamMembers[currentIndex + 1].image}
-                alt={teamMembers[currentIndex + 1].alt}
-                subtitle={teamMembers[currentIndex + 1].subtitle}
-              />
-            )}
+              {currentIndex === teamLength ? (
+                <TeamCard
+                  title={teamMembers[0].title}
+                  description={teamMembers[0].description}
+                  image={teamMembers[0].image}
+                  alt={teamMembers[0].alt}
+                  subtitle={teamMembers[0].subtitle}
+                />
+              ) : (
+                <TeamCard
+                  title={teamMembers[currentIndex + 1].title}
+                  description={teamMembers[currentIndex + 1].description}
+                  image={teamMembers[currentIndex + 1].image}
+                  alt={teamMembers[currentIndex + 1].alt}
+                  subtitle={teamMembers[currentIndex + 1].subtitle}
+                />
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -205,7 +208,9 @@ export default function Home() {
           <h5 className="pr-8 text-right text-lg italic max-sm:text-sm/4">
             (Odisha Campaign)
           </h5>
-          <span className="absolute -right-5 bottom-10 flex aspect-square w-10 items-center justify-center rounded-full border bg-white text-4xl"></span>
+          <span className="absolute -right-5 bottom-10 flex aspect-square w-10 items-center justify-center rounded-full border bg-white text-4xl font-didact">
+            {/* <DoubleQuotesIcon /> */}
+          </span>
         </div>
       </section>
 
@@ -215,7 +220,7 @@ export default function Home() {
 
       {/* Clients Section */}
       <section id="clients" className="bg-white pb-4">
-        <Heading title={"Clients"} primary/>
+        <Heading title={"Clients"} primary />
         <div className="*:object-fit *:grow-1 border-primary mx-auto mt-4 flex max-w-screen-lg flex-wrap items-center justify-center gap-12 rounded-2xl border px-6 py-8 *:w-40 max-md:mx-2 max-md:py-4 max-sm:gap-x-4 max-sm:gap-y-2.5 max-sm:px-3 max-sm:*:w-1/4">
           <img src="/images/clients/avon_cycles.png" alt="avon-cycles" />
           <img src="/images/clients/bonn.png" alt="bonn" />
