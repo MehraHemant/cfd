@@ -247,7 +247,10 @@ export default function Home() {
       </section>
 
       {/* Contact Us Section */}
-      <section id="contact-us" className="bg-white py-8">
+      <section id="contact-us" class="bg-white py-8 relative">
+      <img src="/images/icons/Vector.png" class="absolute -bottom-3 max-md:hidden left-10" alt="vector" />
+      <img src="/images/icons/Phone.png" class="absolute -bottom-28 right-40 max-md:hidden max-lg:right-24 max-sm:right-8 w-20"
+        alt="vector" />
         <Heading title={"Contact us"} primary />
         <div className="my-6 text-center text-3xl italic text-black max-lg:text-2xl max-md:text-lg max-sm:my-2 max-sm:px-px">
           <h5 className="text-xl/5 font-bold max-sm:text-base/4">
@@ -317,6 +320,7 @@ export default function Home() {
           </button>
         </form>
       </section>
+      <Polygon reverse className={'bg-white'} />
     </div>
   );
 }

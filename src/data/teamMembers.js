@@ -1,7 +1,7 @@
 export const teamMembers = [
     {
       id: 1,
-      title: "Ujjwal Singh - CEO",
+      title: "Ujjawal Singh - CEO",
       image: "/images/teams/ujjwal.jpg",
       alt: "ujjwal",
       subtitle: "Engineer. MBA. Visionary Leader.",
