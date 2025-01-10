@@ -44,7 +44,7 @@
 }
 
 
-@layer utilities {
+@layer components {
   .selected {
     @apply border-b border-black underline-offset-2;
   }

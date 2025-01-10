@@ -1,4 +1,4 @@
-import { ServicePageCard } from "../../../public/images/services/ServicesPageCard";
+import { ServicePageCard } from "@/components/service/ServicesPageCard";
 import { btlServicesData } from "@/data/btlServices";
 
 export const metadata = {
@@ -27,7 +27,7 @@ export default function BTLServices() {
           </span>
         </div>
       </section>
-      <section className="bg-primary flex flex-col text-white " >
+      <section className="bg-primary flex flex-col text-white" >
         {btlServicesData.map(({title, subtitle, description, imgSrc, imgAlt}, idx) => (
           <ServicePageCard
             rev={idx % 2 !== 0}

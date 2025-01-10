@@ -1,4 +1,4 @@
-import { ServicePageCard } from "../../../public/images/services/ServicesPageCard";
+import { ServicePageCard } from "@/components/service/ServicesPageCard";
 import { atlServicesData } from "@/data/atlServices";
 
 export const metadata = {
@@ -27,7 +27,7 @@ export default function ATLServices() {
           </span>
         </div>
       </section>
-      <section className="bg-primary flex flex-col text-white">
+      <section className="bg-primary text-white">
         {atlServicesData.map(({ title, subtitle, description, imgSrc, imgAlt }, idx) => (
           <ServicePageCard
             rev={idx % 2 !== 0}

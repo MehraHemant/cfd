@@ -1,5 +1,5 @@
 import { Heading } from "@/components/Heading";
-import { ServicePageCard } from "../../../public/images/services/ServicesPageCard";
+import { ServicePageCard } from "@/components/service/ServicesPageCard";
 import { dmServicesData } from "@/data/dmServices";
 
 export const metadata = {

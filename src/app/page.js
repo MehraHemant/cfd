@@ -10,6 +10,16 @@ import { teamMembers } from "@/data/teamMembers";
 import { useState } from "react";
 
 export default function Home() {
+  
+  const [inputs, setInputs] = useState({name:"", phone:"",email:"", message:""});
+  const {name, phone, email, message} = inputs;
+  const handleInputChange = (e) => {
+    setInputs({...inputs, [e.target.name]: e.target.value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // sendMail(email, message, "Email Sent Successfully");
+  };
   const HeroCarouselSlides = [
     "/images/gadi.png",
     "/images/glow_on_wheels.png",
@@ -247,13 +257,15 @@ export default function Home() {
             Let&apos;s connect and make it happen!
           </h5>
         </div>
-        <form className="bg-primary mx-auto flex max-w-lg flex-col gap-4 px-8 py-12 text-black max-md:px-8 max-sm:px-3 max-sm:text-sm">
+        <form onSubmit={()=>sendMail(email, "this is an testing email", "Email Sent Successfully")} className="bg-primary mx-auto flex max-w-lg flex-col gap-4 px-8 py-12 text-black max-md:px-8 max-sm:px-3 max-sm:text-sm">
           <div className="flex items-center">
             <label htmlFor="name" className="basis-28 text-slate-200">
               Name
             </label>
             <input
-              type="email"
+              type="name"
+              onChange={handleInputChange}
+              value={inputs.name}
               name="name"
               placeholder="Enter your Full Name"
               className="input-field"
@@ -265,6 +277,8 @@ export default function Home() {
             </label>
             <input
               type="tel"
+              onChange={handleInputChange}
+              value={inputs.phone}
               name="phone"
               placeholder="Enter your Mobile Number"
               className="input-field"
@@ -277,6 +291,8 @@ export default function Home() {
             <input
               type="email"
               name="email"
+              onChange={handleInputChange}
+              value={inputs.email}
               placeholder="Enter your email address"
               className="input-field"
             />
@@ -287,6 +303,8 @@ export default function Home() {
             </label>
             <textarea
               name="message"
+              onChange={handleInputChange}
+              value={inputs.message}
               placeholder="Enter your message here"
               className="input-field"
             ></textarea>

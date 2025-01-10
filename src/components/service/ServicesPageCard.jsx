@@ -12,8 +12,8 @@ export function ServicePageCard({
   return (
     <div
       className={twMerge(
-        "mx-auto flex max-w-7xl items-center py-3",
-        rev ? "flex-row-reverse  max-lg:flex-col" : "max-lg:flex-col flex-row"
+        "mx-auto flex max-w-7xl items-center py-3 max-lg:flex-col",
+        rev ? "flex-row-reverse" : "flex-row"
       )}
     >
       <div className="max-w-xl w-full p-8 max-lg:p-6">

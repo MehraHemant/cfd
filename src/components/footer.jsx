@@ -13,16 +13,16 @@ export function Footer() {
   return (
     <section className="bg-primary py-6 text-white">
       <div className="flex flex-wrap justify-center max-sm:text-xs gap-x-5 italic max-sm:gap-1 mb-2">
-        <div className="flex items-center gap-2 max-sm:gap-1">
+        <a href="mailto:care@vistaar.media" className="flex items-center gap-2 max-sm:gap-1">
           <span className="h-4 w-5 max-sm:h-4 max-sm:w-4">
           <MessageIcon />
           </span>
           <h3 className="max-sm:text-sm">care@vistaar.media</h3>
-        </div>
-        <div className="flex items-center gap-2 max-sm:gap-1">
+        </a>
+        <a href="mailto:info@chaltifirtidukaan.com" className="flex items-center gap-2 max-sm:gap-1">
           <MessageIcon />
-          <h3 className="max-sm:text-sm">info@chaltifirtidukan</h3>
-        </div>
+          <h3 className="max-sm:text-sm">info@chaltifirtidukaan.com</h3>
+        </a>
       </div>
       <div className="flex justify-center items-center w-full flex-wrap gap-x-3 gap-y-1 max-sm:text-sm mb-2 py-2 max-sm:gap-x-3">
         <div className="flex items-center gap-2 max-sm:gap-1">

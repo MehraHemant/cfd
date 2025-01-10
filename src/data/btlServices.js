@@ -73,7 +73,7 @@ export const btlServicesData = [
   },
   {
     id: 9,
-    imgSrc: "/images/btl/pole.jpg",
+  imgSrc: "/images/btl/pole.jpg",
     imgAlt: "Pole Branding - Efficient and Impactful Advertising",
     title: "Pole Branding",
     subtitle: "",
