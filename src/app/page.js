@@ -22,9 +22,9 @@ export default function Home() {
   };
   const HeroCarouselSlides = [
     "/images/gadi.png",
-    "/images/glow_on_wheels.png",
+    // "/images/glow_on_wheels.png",
     "/images/gadi.png",
-    "/images/glow_on_wheels.png",
+    // "/images/glow_on_wheels.png",
   ];
   const teamLength = teamMembers.length - 1;
   const [currentIndex, setCurrentIndex] = useState(0);

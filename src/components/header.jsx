@@ -37,7 +37,7 @@ export function Header() {
         <img
           src="/images/CFD-Logo.png"
           className="absolute top-1.5 h-16"
-          alt="logo"
+        alt="logo"
         />
       </div>
       <div
