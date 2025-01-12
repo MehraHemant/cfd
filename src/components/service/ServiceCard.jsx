@@ -12,7 +12,7 @@ export function ServiceCard({ title, description, icon, link, className, iconCla
     >
       <div className="flex flex-col items-center gap-4">
         <div className={twMerge("w-fit rounded-full p-1", iconClassName)}>
-          <Image width={150} height={150}
+          <Image priority width={150} height={150}
             className="aspect-square w-12 object-contain p-2"
             src={icon}
             alt={icon}

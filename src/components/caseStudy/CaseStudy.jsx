@@ -31,7 +31,7 @@ export function CaseStudy() {
         id="slider"
         className="py-6 flex w-full items-center justify-center gap-4 max-sm:gap-2"
       >
-        <Image width={300} height={300}
+        <Image priority width={300} height={300}
           id="prev"
           src="/images/icons/left-arrow.png"
           className="w-7 cursor-pointer"
@@ -51,7 +51,7 @@ export function CaseStudy() {
               ))}
           </div>
         </div>
-        <Image width={300} height={300}
+        <Image priority width={300} height={300}
           id="next"
           src="/images/icons/left-arrow.png"
           className="w-7 rotate-180 cursor-pointer"
@@ -62,29 +62,29 @@ export function CaseStudy() {
       <div id="image-wrapper" className="relative mx-auto py-4 w-full max-w-4xl overflow-hidden">
         <div id="image-slider" className="flex w-full">
           <div id="brand-enhancement" className={twMerge("grid w-full grid-cols-3 gap-6 px-4 py-2 *:rounded-md max-sm:grid-cols-2 max-sm:gap-3", (currentIndex == 0) ? 'grid': 'hidden' )}>
-            <Image width={300} height={300} src="/images/case_study/brand_enhancement_(1).jpg" alt="brand_enhancement_1" className="aspect-[4/3] object-cover object-center shadow-md shadow-black/40" />
-            <Image width={300} height={300} src="/images/case_study/brand_enhancement_(3).jpeg" alt="brand_enhancement_3" className="aspect-[4/3] object-cover object-center shadow-md shadow-black/40" />
-            <Image width={300} height={300} src="/images/case_study/brand_enhancement_(4).jpeg" alt="brand_enhancement_4" className="aspect-[4/3] object-cover object-center shadow-md shadow-black/40" />
-            <Image width={300} height={300} src="/images/case_study/brand_enhancement_(5).jpeg" alt="brand_enhancement_5" className="aspect-[4/3] object-cover object-center shadow-md shadow-black/40" />
-            <Image width={300} height={300} src="/images/case_study/brand_enhancement_(6).jpeg" alt="brand_enhancement_6" className="aspect-[4/3] object-cover object-center shadow-md shadow-black/40" />
-            <Image width={300} height={300} src="/images/case_study/brand_enhancement_(7).jpeg" alt="brand_enhancement_7" className="aspect-[4/3] object-cover object-center shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/brand_enhancement_(1).jpg" alt="brand_enhancement_1" className="aspect-[4/3] object-cover object-center shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/brand_enhancement_(3).jpeg" alt="brand_enhancement_3" className="aspect-[4/3] object-cover object-center shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/brand_enhancement_(4).jpeg" alt="brand_enhancement_4" className="aspect-[4/3] object-cover object-center shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/brand_enhancement_(5).jpeg" alt="brand_enhancement_5" className="aspect-[4/3] object-cover object-center shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/brand_enhancement_(6).jpeg" alt="brand_enhancement_6" className="aspect-[4/3] object-cover object-center shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/brand_enhancement_(7).jpeg" alt="brand_enhancement_7" className="aspect-[4/3] object-cover object-center shadow-md shadow-black/40" />
           </div>
 
           <div id="brand-exposure" className={twMerge("grid w-full grid-cols-3 gap-6 px-4 py-2 *:rounded-md max-sm:grid-cols-2 max-sm:gap-3", (currentIndex == 1) ? 'grid': 'hidden' )}>
-            <Image width={300} height={300} src="/images/case_study/brand_exposure_(1).jpg" alt="brand_exposure_1" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
-            <Image width={300} height={300} src="/images/case_study/brand_exposure_(3).jpg" alt="brand_exposure_3" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
-            <Image width={300} height={300} src="/images/case_study/brand_exposure_(4).jpg" alt="brand_exposure_4" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
-            <Image width={300} height={300} src="/images/case_study/brand_exposure_(5).jpg" alt="brand_exposure_5" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
-            <Image width={300} height={300} src="/images/case_study/brand_exposure_(6).jpg" alt="brand_exposure_6" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
-            <Image width={300} height={300} src="/images/case_study/brand_exposure_(7).jpg" alt="brand_exposure_7" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/brand_exposure_(1).jpg" alt="brand_exposure_1" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/brand_exposure_(3).jpg" alt="brand_exposure_3" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/brand_exposure_(4).jpg" alt="brand_exposure_4" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/brand_exposure_(5).jpg" alt="brand_exposure_5" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/brand_exposure_(6).jpg" alt="brand_exposure_6" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/brand_exposure_(7).jpg" alt="brand_exposure_7" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
           </div>
           <div id="brand-innovating_marketing" className={twMerge("grid w-full grid-cols-3 gap-6 px-4 py-2 *:rounded-md max-sm:grid-cols-2 max-sm:gap-3", (currentIndex == 2) ? 'grid': 'hidden' )}>
-            <Image width={300} height={300} src="/images/case_study/innovating_marketing_(1).jpg" alt="innovating_marketing_1" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
-            <Image width={300} height={300} src="/images/case_study/innovating_marketing_(2).jpg" alt="innovating_marketing_2" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
-            <Image width={300} height={300} src="/images/case_study/innovating_marketing_(3).jpg" alt="innovating_marketing_3" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
-            <Image width={300} height={300} src="/images/case_study/innovating_marketing_(4).jpg" alt="innovating_marketing_4" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
-            <Image width={300} height={300} src="/images/case_study/innovating_marketing_(5).jpg" alt="innovating_marketing_5" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
-            <Image width={300} height={300} src="/images/case_study/innovating_marketing_(6).jpg" alt="innovating_marketing_6" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/innovating_marketing_(1).jpg" alt="innovating_marketing_1" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/innovating_marketing_(2).jpg" alt="innovating_marketing_2" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/innovating_marketing_(3).jpg" alt="innovating_marketing_3" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/innovating_marketing_(4).jpg" alt="innovating_marketing_4" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/innovating_marketing_(5).jpg" alt="innovating_marketing_5" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
+            <Image priority width={300} height={300} src="/images/case_study/innovating_marketing_(6).jpg" alt="innovating_marketing_6" className="aspect-[4/3] object-cover object-bottom shadow-md shadow-black/40" />
           </div>
         </div>
       </div>
