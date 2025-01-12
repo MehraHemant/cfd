@@ -9,7 +9,7 @@ export function TeamCard({
   subtitle,
 }) {
   return (
-    <div className={twMerge("team-member-card h-[520px] text-white", active ? 'scale-105' : 'scale-95')}>
+    <div className={twMerge("team-member-card h-[520px] text-white")}>
       <img src={image} className="avatar" alt={alt} />
       <div className="py-3 max-sm:py-2 text-center">
         <h3 className="text-xl max-md:text-lg font-bold uppercase">{title}</h3>
