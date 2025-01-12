@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function ServiceCardButton({ link }) {
@@ -6,7 +7,7 @@ export function ServiceCardButton({ link }) {
       <Link href={link} className="max-md:text-base max-sm:text-sm">
         know more
       </Link>
-      <img src="images/logo/right-arrow.svg" alt="right-arrow" />
+      <Image width={20} height={20} className="w-6 object-fit max-md:w-4" src="images/logo/right-arrow.svg" alt="right-arrow" />
     </button>
   );
 }

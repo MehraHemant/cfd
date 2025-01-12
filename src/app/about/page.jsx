@@ -5,6 +5,7 @@ import { Heading } from "@/components/Heading";
 import { HeroSection } from "@/components/HeroSection";
 import { Polygon } from "@/components/ui/polygon";
 import { benefitCardData } from "@/data/benefits";
+import Image from "next/image";
 
 export const metadata = {
   title: "About | Chalti Firti Dukan",
@@ -48,8 +49,8 @@ export default function About() {
       <section id="costing-plan" className="bg-secondary pt-10">
         <Heading title={"costing plan"} primary />
         <div className="flex max-sm:flex-col max-sm:items-center gap-x-4 gap-y-2 max-w-4xl pt-3 pb-10 max-sm:pt-0 max-sm:pb-4 max-sm:px-0 px-4 mx-auto">
-        <img src="/images/Package 1.png" className="w-1/2 max-sm:w-4/5 object-cover" alt="package-1"/>
-        <img src="/images/Package 2.png" className="w-1/2 max-sm:w-4/5 object-cover" alt="package-2"/>
+        <Image width={400} height={400} src="/images/Package 1.png" className="w-1/2 max-sm:w-4/5 object-cover" alt="package-1"/>
+        <Image width={400} height={400} src="/images/Package 2.png" className="w-1/2 max-sm:w-4/5 object-cover" alt="package-2"/>
       </div>
       </section>
     </>

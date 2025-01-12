@@ -6,6 +6,7 @@ import { ServiceCard } from '@/components/service';
 import { TeamCard } from '@/components/teams/TeamCard';
 import { Polygon } from '@/components/ui/polygon';
 import { teamMembers } from '@/data/teamMembers';
+import Image from 'next/image';
 // import { DoubleQuotesIcon } from "@/icons/DoubleQuotesIcon";
 import { useState } from 'react';
 
@@ -62,7 +63,7 @@ export default function Home() {
       <Polygon />
 
       <section className="flex w-full justify-center bg-secondary px-4 py-6">
-        <img src="images/glow_on_wheels.png" className="w-full" alt="gadi details" />
+        <Image width={2000} height={2000} src="/images/glow_on_wheels.png" className="w-full" alt="gadi details" />
       </section>
       <Polygon reverse />
 
@@ -151,9 +152,9 @@ export default function Home() {
           />
         </div>
         <div className="mt-5 flex flex-wrap items-center justify-between gap-x-12 max-md:mt-3 max-md:gap-x-4 max-sm:gap-y-2">
-          <img src="/images/logo/Expand.png" className="mx-auto max-w-xs object-contain max-lg:max-w-64 max-md:max-w-32" alt="expand" />
-          <img src="/images/logo/Explore.png" className="mx-auto mt-6 max-w-xs object-contain max-md:mt-2 max-md:max-w-32" alt="explore" />
-          <img src="/images/logo/Experience.png" className="mx-auto max-w-xs object-contain max-md:max-w-32" alt="experience" />
+          <Image width={400} height={400} src="/images/logo/Expand.png" className="mx-auto max-w-xs object-contain max-lg:max-w-64 max-md:max-w-32 w-full" alt="expand" />
+          <Image width={400} height={400} src="/images/logo/Explore.png" className="mx-auto mt-6 max-w-xs object-contain max-md:mt-2 max-md:max-w-32 w-full" alt="explore" />
+          <Image width={400} height={400} src="/images/logo/Experience.png" className="mx-auto max-w-xs object-contain max-md:max-w-32 w-full" alt="experience" />
         </div>
         <h2 className="mx-auto mt-4 w-fit text-xl max-md:text-base">
           with
@@ -186,24 +187,24 @@ export default function Home() {
       <section id="clients" className="bg-white pb-4">
         <Heading title={'Clients'} primary />
         <div className="*:object-fit *:grow-1 mx-auto mt-4 flex max-w-screen-lg flex-wrap items-center justify-center gap-12 rounded-2xl border border-primary px-6 py-8 *:w-40 max-md:mx-2 max-md:py-4 max-sm:gap-x-4 max-sm:gap-y-2.5 max-sm:px-3 max-sm:*:w-1/4">
-          <img src="/images/clients/avon_cycles.png" alt="avon-cycles" />
-          <img src="/images/clients/bonn.png" alt="bonn" />
-          <img src="/images/clients/kurlon.png" alt="kurlon" />
-          <img src="/images/clients/rungtas.png" alt="rungtas" />
-          <img src="/images/clients/lqintimo.png" alt="lqintimo" />
-          <img src="/images/clients/myntra.png" alt="myntra" />
-          <img src="/images/clients/bazaar_kolkata.png" alt="bazaar-kolkata" />
-          <img src="/images/clients/ikea.png" alt="ikea" />
-          <img src="/images/clients/livfast.png" alt="livfast" />
-          <img src="/images/clients/girdhar.png" alt="girdhar" />
-          <img src="/images/clients/colorbar.png" alt="colorbar" />
+          <Image width={100} height={100} src="/images/clients/avon_cycles.png" alt="avon-cycles" />
+          <Image width={100} height={100} src="/images/clients/bonn.png" alt="bonn" />
+          <Image width={100} height={100} src="/images/clients/kurlon.png" alt="kurlon" />
+          <Image width={100} height={100} src="/images/clients/rungtas.png" alt="rungtas" />
+          <Image width={100} height={100} src="/images/clients/lqintimo.png" alt="lqintimo" />
+          <Image width={100} height={100} src="/images/clients/myntra.png" alt="myntra" />
+          <Image width={100} height={100} src="/images/clients/bazaar_kolkata.png" alt="bazaar-kolkata" />
+          <Image width={100} height={100} src="/images/clients/ikea.png" alt="ikea" />
+          <Image width={100} height={100} src="/images/clients/livfast.png" alt="livfast" />
+          <Image width={100} height={100} src="/images/clients/girdhar.png" alt="girdhar" />
+          <Image width={100} height={100} src="/images/clients/colorbar.png" alt="colorbar" />
         </div>
       </section>
 
       {/* Contact Us Section */}
       <section id="contact-us" className="relative bg-white py-8">
-        <img src="/images/icons/Vector.png" className="absolute -bottom-3 left-10 max-md:hidden" alt="vector" />
-        <img src="/images/icons/Phone.png" className="absolute -bottom-28 right-40 w-20 max-lg:right-24 max-md:hidden max-sm:right-8" alt="vector" />
+        <Image width={100} height={100} src="/images/icons/Vector.png" className="absolute -bottom-3 left-10 max-md:hidden" alt="vector" />
+        <Image width={100} height={100} src="/images/icons/Phone.png" className="absolute -bottom-28 right-40 w-20 max-lg:right-24 max-md:hidden max-sm:right-8" alt="vector" />
         <Heading title={'Contact us'} primary />
         <div className="my-6 text-center text-3xl italic text-black max-lg:text-2xl max-md:text-lg max-sm:my-2 max-sm:px-px">
           <h5 className="text-xl/5 font-bold max-sm:text-base/4">Ready to take your brand on the move?</h5>
