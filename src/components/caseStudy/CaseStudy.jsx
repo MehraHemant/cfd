@@ -51,7 +51,7 @@ export function CaseStudy() {
             className={twMerge('grid w-full grid-cols-3 gap-6 px-4 py-2 *:rounded-md max-sm:grid-cols-2 max-sm:gap-3', currentIndex == 0 ? 'grid' : 'hidden')}
           >
             {caseStudies.brandEnhancement.map(({ src, alt }) => (
-              <Image priority width={300} height={300} src={src} alt={alt} className="aspect-[4/3] object-cover object-center shadow-md shadow-black/40" />
+              <Image priority width={300} key={alt} height={300} src={src} alt={alt} className="aspect-[4/3] object-cover object-center shadow-md shadow-black/40" />
             ))}
           </div>
 
@@ -60,7 +60,7 @@ export function CaseStudy() {
             className={twMerge('grid w-full grid-cols-3 gap-6 px-4 py-2 *:rounded-md max-sm:grid-cols-2 max-sm:gap-3', currentIndex == 1 ? 'grid' : 'hidden')}
           >
             {caseStudies.brandExposure.map(({ src, alt }) => (
-              <Image priority width={300} height={300} src={src} alt={alt} className="aspect-[4/3] object-cover object-center shadow-md shadow-black/40" />
+              <Image priority width={300} key={alt} height={300} src={src} alt={alt} className="aspect-[4/3] object-cover object-center shadow-md shadow-black/40" />
             ))}
           </div>
           <div
