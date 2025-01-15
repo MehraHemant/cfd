@@ -64,7 +64,7 @@
     @apply px-3 text-center text-lg max-sm:text-base/5;
   }
   .primary-btn {
-    @apply uppercase border-2 hover:bg-[#FF92C9] hover:border-white hover:shadow-2xl w-fit px-3 py-2 tracking-widest font-semibold flex items-center gap-3 duration-300 transition-all ease-in-out;
+    @apply uppercase border-2 hover:bg-[#FF92C9] hover:border-white w-fit px-3 py-2 tracking-widest font-semibold flex items-center gap-3 duration-300 transition-all ease-in-out;
   }
   .input-field {
     @apply bg-secondary border-primary placeholder:text-primary/60 w-full rounded-lg px-3 py-2 outline-none max-sm:bg-secondary/20 max-sm:rounded-none max-sm:border-b max-sm:border-secondary max-sm:placeholder:text-secondary;
