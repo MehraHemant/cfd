@@ -39,8 +39,8 @@ export function TeamCarousel() {
       {/* Carousel */}
       <div ref={carouselRef} className="flex snap-x snap-mandatory overflow-hidden scroll-smooth">
         {teamMembers.map(({ title, image, alt, subtitle, description }, idx) => (
-          <div className="w-fit flex-none px-1" ref={cardRef}>
-            <TeamCard key={idx} title={title} image={image} alt={alt} subtitle={subtitle} description={description} />
+          <div key={idx} className="w-fit flex-none px-1" ref={cardRef}>
+            <TeamCard title={title} image={image} alt={alt} subtitle={subtitle} description={description} />
           </div>
         ))}
       </div>
