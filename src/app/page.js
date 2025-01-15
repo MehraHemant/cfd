@@ -1,4 +1,5 @@
 'use client';
+import { TeamCarousel } from '@/components';
 import { Carousel } from '@/components/Carousel';
 import { Heading } from '@/components/Heading';
 import { HeroSection } from '@/components/HeroSection';
@@ -7,51 +8,20 @@ import { TeamCard } from '@/components/teams/TeamCard';
 import { Polygon } from '@/components/ui/polygon';
 import { teamMembers } from '@/data/teamMembers';
 import Image from 'next/image';
-// import { DoubleQuotesIcon } from "@/icons/DoubleQuotesIcon";
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
+  const HeroCarouselSlides = ['/images/gadi.png', '/images/gadi.png'];
   const [inputs, setInputs] = useState({ name: '', phone: '', email: '', message: '' });
+
   const handleInputChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // sendMail(email, message, "Email Sent Successfully");
   };
-  const HeroCarouselSlides = [
-    '/images/gadi.png',
-    // "/images/glow_on_wheels.png",
-    '/images/gadi.png',
-    // "/images/glow_on_wheels.png",
-  ];
-  const teamLength = teamMembers.length - 1;
-  const [idxs, setIdxs] = useState({ current: 0, first: 1, second: 2 });
-  const { current, first, second } = idxs;
-  const onRightClick = () => {
-    setIdxs((prevIndex) => {
-      if (current === teamLength - 2) {
-        return { ...prevIndex, current: teamLength - 1, first: teamLength, second: 0 };
-      } else if (current === teamLength - 1) {
-        return { ...prevIndex, current: teamLength, first: 0, second: 1 };
-      } else if (current === teamLength) {
-        return { ...prevIndex, current: 0, first: 1, second: 2 };
-      } else {
-        return { ...prevIndex, current: current + 1, first: current + 2, second: current + 3 };
-      }
-    });
-  };
-  const onLeftClick = () => {
-    setIdxs((prevIndex) => {
-      if (current === 0) {
-        return { ...prevIndex, current: teamLength, first: 0, second: 1 };
-      } else if (current === teamLength) {
-        return { ...prevIndex, current: current - 1, first: current, second: 0 };
-      } else {
-        return { ...prevIndex, current: current - 1, first: current, second: current + 1 };
-      }
-    });
-  };
+
   return (
     <div>
       {/* Hero Section */}
@@ -71,44 +41,8 @@ export default function Home() {
       <section className="bg-primary px-36 py-10 max-lg:px-8 max-md:px-1">
         <div className="flex flex-col items-center gap-3 pb-6 max-lg:gap-2 max-md:gap-1">
           <Heading title={'Teams'} />
-          <div className="relative w-full px-10 max-md:px-4">
-            <button
-              className="absolute left-0 top-1/2 z-10 aspect-square -translate-y-1/2 cursor-pointer rounded-full bg-white/60 px-2 align-middle text-2xl text-black"
-              onClick={onLeftClick}
-            >
-              &lt;
-            </button>
-            <button
-              className="absolute right-0 top-1/2 z-10 aspect-square -translate-y-1/2 cursor-pointer rounded-full bg-white/60 px-2 align-middle text-2xl text-black"
-              onClick={onRightClick}
-            >
-              &gt;
-            </button>
-            <div className="justify-left relative flex w-full gap-x-2 overflow-hidden px-0 py-2 max-md:gap-x-1">
-              <TeamCard
-                title={teamMembers[current].title}
-                description={teamMembers[current].description}
-                image={teamMembers[current].image}
-                alt={teamMembers[current].alt}
-                subtitle={teamMembers[current].subtitle}
-              />
-              <TeamCard
-                title={teamMembers[first].title}
-                description={teamMembers[first].description}
-                image={teamMembers[first].image}
-                alt={teamMembers[first].alt}
-                subtitle={teamMembers[first].subtitle}
-              />
-              <TeamCard
-                title={teamMembers[second].title}
-                description={teamMembers[second].description}
-                image={teamMembers[second].image}
-                alt={teamMembers[second].alt}
-                subtitle={teamMembers[second].subtitle}
-              />
-            </div>
-          </div>
         </div>
+        <TeamCarousel />
       </section>
 
       <Polygon />
@@ -124,7 +58,7 @@ export default function Home() {
             title={'CFD'}
             description={'Your brand on wheels bringing businesses closer to customers with mobile promotion like never before.'}
             icon={'/images/icons/logo.png'}
-            link={'/about'}
+            link={'/about#case-study'}
           />
           <ServiceCard
             className={'bg-cyan-700'}
@@ -132,7 +66,7 @@ export default function Home() {
             title={'BTL'}
             description={'Directly engage your audience with personalized, on-ground marketing solutions that leave a lasting impression.'}
             icon={'/images/icons/market-research.png'}
-            link={'/services-btl'}
+            link={'/btlServices'}
           />
           <ServiceCard
             className={'bg-purple-800'}
@@ -140,7 +74,7 @@ export default function Home() {
             title={'ATL'}
             description={'Reach your masses with high impact strategic campaigns across a variety of media channels'}
             icon={'/images/icons/video-editing.png'}
-            link={'/services-atl'}
+            link={'/atlServices'}
           />
           <ServiceCard
             className={'bg-amber-700'}
@@ -148,13 +82,20 @@ export default function Home() {
             title={'Digital'}
             description={"Amplify your brand's presence online with cutting-edge digital marketing strategies that connect and convert."}
             icon={'/images/icons/social-media.png'}
-            link={'/services-atl'}
+            link={'/dmServices'}
           />
         </div>
         <div className="mt-5 flex flex-wrap items-center justify-between gap-x-12 max-md:mt-3 max-md:gap-x-4 max-sm:gap-y-2">
-          <Image priority width={400} height={400} src="/images/logo/Expand.png" className="mx-auto max-w-xs object-contain max-lg:max-w-64 max-md:max-w-32 w-full" alt="expand" />
-          <Image priority width={400} height={400} src="/images/logo/Explore.png" className="mx-auto mt-6 max-w-xs object-contain max-md:mt-2 max-md:max-w-32 w-full" alt="explore" />
-          <Image priority width={400} height={400} src="/images/logo/Experience.png" className="mx-auto max-w-xs object-contain max-md:max-w-32 w-full" alt="experience" />
+          <Image priority width={400} height={400} src="/images/logo/Expand.png" className="mx-auto w-full max-w-xs object-contain max-lg:max-w-64 max-md:max-w-32" alt="expand" />
+          <Image
+            priority
+            width={400}
+            height={400}
+            src="/images/logo/Explore.png"
+            className="mx-auto mt-6 w-full max-w-xs object-contain max-md:mt-2 max-md:max-w-32"
+            alt="explore"
+          />
+          <Image priority width={400} height={400} src="/images/logo/Experience.png" className="mx-auto w-full max-w-xs object-contain max-md:max-w-32" alt="experience" />
         </div>
         <h2 className="mx-auto mt-4 w-fit text-xl max-md:text-base">
           with
@@ -204,7 +145,14 @@ export default function Home() {
       {/* Contact Us Section */}
       <section id="contact-us" className="relative bg-white py-8">
         <Image priority width={100} height={100} src="/images/icons/Vector.png" className="absolute -bottom-3 left-10 max-md:hidden" alt="vector" />
-        <Image priority width={100} height={100} src="/images/icons/Phone.png" className="absolute -bottom-28 right-40 w-20 max-lg:right-24 max-md:hidden max-sm:right-8" alt="vector" />
+        <Image
+          priority
+          width={100}
+          height={100}
+          src="/images/icons/Phone.png"
+          className="absolute -bottom-28 right-40 w-20 max-lg:right-24 max-md:hidden max-sm:right-8"
+          alt="vector"
+        />
         <Heading title={'Contact us'} primary />
         <div className="my-6 text-center text-3xl italic text-black max-lg:text-2xl max-md:text-lg max-sm:my-2 max-sm:px-px">
           <h5 className="text-xl/5 font-bold max-sm:text-base/4">Ready to take your brand on the move?</h5>
