@@ -2,14 +2,14 @@ import { twMerge } from "tailwind-merge"
 
 export function TeamCard({
   title,
-  active,
+  className,
   description,
   image,
   alt,
   subtitle,
 }) {
   return (
-    <div className={twMerge("team-member-card h-[520px] text-white")}>
+    <div className={twMerge("team-member-card h-full text-white", className)}>
       <img src={image} className="avatar" alt={alt} />
       <div className="py-3 max-sm:py-2 text-center">
         <h3 className="text-xl max-md:text-lg font-bold uppercase">{title}</h3>

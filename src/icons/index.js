@@ -5,3 +5,5 @@ export {PhoneCallIcon} from './PhoneCallIcon';
 export {TelephoneIcon} from './TelephoneIcon';
 export {YoutubeIcon} from './YoutubeIcon';
 export {DoubleQuotesIcon} from './DoubleQuotesIcon';
+export {ArrowLeftCircleIcon} from './ArrowLeftCircleIcon';
+export {ArrowRightCircleIcon} from './ArrowRightCircleIcon';

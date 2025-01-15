@@ -49,7 +49,7 @@
     @apply border-b border-black underline-offset-2;
   }
   .team-member-card {
-    @apply flex flex-col flex-none max-w-sm items-center w-full px-4 py-5 bg-black/25;
+    @apply flex flex-col flex-none items-center w-full px-4 py-5 bg-black/25;
   }
   .heading {
     @apply pt-3 text-5xl w-fit mx-auto font-extrabold uppercase max-lg:text-4xl max-lg:font-bold max-md:text-3xl max-md:font-extrabold max-sm:text-xl/5;

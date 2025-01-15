@@ -3,6 +3,7 @@
 import { teamMembers } from '@/data/teamMembers';
 import { useRef } from 'react';
 import { TeamCard } from './TeamCard';
+import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@/icons';
 
 export function TeamCarousel() {
   const carouselRef = useRef(null);
@@ -29,29 +30,22 @@ export function TeamCarousel() {
   return (
     <div className="relative w-full overflow-hidden px-12 py-8 max-sm:px-4">
       {/* Left Button */}
-      <button
-        onClick={scrollLeft}
-        className="absolute left-4 top-1/2 z-10 aspect-square -translate-y-1/2 transform rounded-full border border-white bg-gray-500/40 px-2 align-middle text-2xl/snug text-white"
-      >
-        &#8592;
+      <button onClick={scrollLeft} className="absolute left-0 top-1/2 z-10">
+        <ArrowLeftCircleIcon className="h-10 w-10 text-white max-md:h-6 max-md:w-6" />
       </button>
 
       {/* Carousel */}
       <div ref={carouselRef} className="flex snap-x snap-mandatory overflow-hidden scroll-smooth">
         {teamMembers.map(({ title, image, alt, subtitle, description }, idx) => (
-          <div key={idx} className="w-fit flex-none px-1" ref={cardRef}>
+          <div key={idx} className="w-1/4 flex-none px-1 max-2xl:w-1/3 max-lg:w-1/2 max-sm:w-full" ref={cardRef}>
             <TeamCard title={title} image={image} alt={alt} subtitle={subtitle} description={description} />
           </div>
         ))}
       </div>
 
       {/* Right Button */}
-      <button
-        onClick={scrollRight}
-        className="absolute right-4 top-1/2 z-10 aspect-square -translate-y-1/2 transform rounded-full border border-white bg-gray-500/40 px-2 align-middle text-2xl/snug text-white"
-      >
-        {' '}
-        &#8594;
+      <button onClick={scrollRight} className="absolute right-0 top-1/2 z-10">
+        <ArrowRightCircleIcon className="h-10 w-10 text-white max-md:h-6 max-md:w-6" />
       </button>
     </div>
   );
