@@ -1,129 +1,93 @@
 'use client';
 
-import { useState } from 'react';
-import { Heading } from '../Heading';
-import { twMerge } from 'tailwind-merge';
-import Image from 'next/image';
+import { useRef, useState } from 'react';
+import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@/icons';
 import { caseStudies } from '@/data/caseStudy';
-import { Button } from '../ui/Button';
+import { Heading } from '../Heading';
+import { Modal } from '../ui/modal';
+import Image from 'next/image';
+
+function CaseStudyCard({ img, brand, duration }) {
+  return (
+    <div className="group flex flex-col gap-6 rounded-br-3xl rounded-tl-3xl bg-white bg-white/60 p-8">
+      <div className="relative">
+        <Image src={img} className="relative z-10 w-full" alt="case study" width={400} height={300} />
+        <div className={`absolute -left-2 -top-2 z-0 h-1/2 w-1/2 bg-primary transition-all duration-300 group-hover:translate-x-[calc(100%+16px)] group-hover:bg-secondary`} />
+        <div className="absolute -bottom-2 -right-2 z-0 h-1/2 w-1/2 bg-secondary transition-all duration-300 group-hover:-translate-x-[calc(100%+16px)] group-hover:bg-primary" />
+      </div>
+      <div className="text-center">
+        <h2 className="text-lg font-bold uppercase">{brand}</h2>
+        <h4 className="text-md">
+          <b>Duration</b> : {duration}
+        </h4>
+      </div>
+    </div>
+  );
+}
 
 export function CaseStudy() {
-  const caseStudy = ['Brand Enhancement', 'brand exposure', 'Innovating Marketing'];
-  const [showAll, setShowAll] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [data, setData] = useState({});
+  const carouselRef = useRef(null);
+  const cardRef = useRef(null);
 
-  const handleNextClick = () => {
-    currentIndex === caseStudy.length - 1 ? setCurrentIndex(0) : setCurrentIndex(currentIndex + 1);
+  const scrollLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: -cardRef.current.scrollWidth,
+        behavior: 'smooth',
+      });
+    }
   };
 
-  const handlePrevClick = () => {
-    currentIndex === 0 ? setCurrentIndex(caseStudy.length - 1) : setCurrentIndex(currentIndex - 1);
+  const scrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: cardRef.current.scrollWidth,
+        behavior: 'smooth',
+      });
+    }
   };
-
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <section className="bg-secondary" id="case-study">
+    <section className="relative w-full bg-secondary px-36 py-10 max-lg:px-8 max-md:px-1" id="case-study">
       <Heading title={'case study'} primary />
-      <div id="slider" className="flex w-full items-center justify-center gap-4 py-6 max-sm:gap-2">
-        <Image priority width={300} height={300} id="prev" src="/images/icons/left-arrow.png" className="w-7 cursor-pointer" alt="left-arrow" onClick={handlePrevClick} />
-        <div className="relative flex w-56 justify-start overflow-hidden">
-          <div id="carousel" style={{ translate: `-${224 * currentIndex}px` }} className={twMerge('relative top-0 flex w-full transition-all duration-500')}>
-            {caseStudy.map((title) => (
-              <div key={title} className="case-study-card slide w-52 px-2">
-                {title}
-              </div>
-            ))}
-          </div>
-        </div>
-        <Image
-          priority
-          width={300}
-          height={300}
-          id="next"
-          src="/images/icons/left-arrow.png"
-          className="w-7 rotate-180 cursor-pointer"
-          alt="right-arrow"
-          onClick={handleNextClick}
-        />
-      </div>
-      <div id="image-wrapper" className="relative mx-auto w-full max-w-6xl overflow-hidden py-4">
-        <div id="image-slider" className="flex w-full flex-col">
-          <div
-            id="brand-enhancement"
-            className={twMerge('grid w-full grid-cols-3 gap-6 px-4 py-2 *:rounded-md max-sm:grid-cols-2 max-sm:gap-3', currentIndex == 0 ? 'grid' : 'hidden')}
-          >
-            {(showAll ? caseStudies.brandEnhancement : caseStudies.brandEnhancement.slice(0, 9)).map(({ src, alt }) => (
-              <Image priority width={300} key={alt} height={300} src={src} alt={alt} className="aspect-[4/3] w-full object-cover object-center shadow-md shadow-black/40" />
-            ))}
-          </div>
+      <div className="relative w-full overflow-hidden px-12 py-8 max-sm:px-4">
+        {/* Left Button */}
+        <button onClick={scrollLeft} className="absolute left-0 top-1/2 z-10">
+          <ArrowLeftCircleIcon className="h-10 w-10 text-white max-md:h-6 max-md:w-6" />
+        </button>
 
-          <div
-            id="brand-exposure"
-            className={twMerge('grid w-full grid-cols-3 gap-6 px-4 py-2 *:rounded-md max-sm:grid-cols-2 max-sm:gap-3', currentIndex == 1 ? 'grid' : 'hidden')}
-          >
-            {(showAll ? caseStudies.brandExposure : caseStudies.brandExposure.slice(0, 9)).map(({ src, alt }) => (
-              <Image priority width={300} key={alt} height={300} src={src} alt={alt} className="aspect-[4/3] w-full object-cover object-center shadow-md shadow-black/40" />
-            ))}
-          </div>
-          <div
-            id="brand-innovating_marketing"
-            className={twMerge('grid w-full grid-cols-3 gap-6 px-4 py-2 *:rounded-md max-sm:grid-cols-2 max-sm:gap-3', currentIndex == 2 ? 'grid' : 'hidden')}
-          >
-            <Image
-              priority
-              width={300}
-              height={300}
-              src="/images/case_study/innovating_marketing_(1).jpg"
-              alt="innovating_marketing_1"
-              className="aspect-[4/3] w-full object-cover object-bottom shadow-md shadow-black/40"
-            />
-            <Image
-              priority
-              width={300}
-              height={300}
-              src="/images/case_study/innovating_marketing_(2).jpg"
-              alt="innovating_marketing_2"
-              className="aspect-[4/3] w-full object-cover object-bottom shadow-md shadow-black/40"
-            />
-            <Image
-              priority
-              width={300}
-              height={300}
-              src="/images/case_study/innovating_marketing_(3).jpg"
-              alt="innovating_marketing_3"
-              className="aspect-[4/3] w-full object-cover object-bottom shadow-md shadow-black/40"
-            />
-            <Image
-              priority
-              width={300}
-              height={300}
-              src="/images/case_study/innovating_marketing_(4).jpg"
-              alt="innovating_marketing_4"
-              className="aspect-[4/3] w-full object-cover object-bottom shadow-md shadow-black/40"
-            />
-            <Image
-              priority
-              width={300}
-              height={300}
-              src="/images/case_study/innovating_marketing_(5).jpg"
-              alt="innovating_marketing_5"
-              className="aspect-[4/3] w-full object-cover object-bottom shadow-md shadow-black/40"
-            />
-            <Image
-              priority
-              width={300}
-              height={300}
-              src="/images/case_study/innovating_marketing_(6).jpg"
-              alt="innovating_marketing_6"
-              className="aspect-[4/3] w-full object-cover object-bottom shadow-md shadow-black/40"
-            />
-          </div>
-          <div className="mt-4 flex w-full justify-center">
-            <Button onClick={() => setShowAll((prev) => !prev)} className="border-black bg-white/80 font-medium text-black border-none hover:bg-white/80">
-              {showAll ? 'Show Less' : 'Show More'}
-            </Button>
-          </div>
+        {/* Carousel */}
+        <div ref={carouselRef} className="flex snap-x snap-mandatory overflow-hidden scroll-smooth">
+          {caseStudies.map((item, idx) => (
+            <div
+              key={idx}
+              className="w-1/4 flex-none px-1 max-2xl:w-1/3 max-lg:w-1/2 max-sm:w-full"
+              onClick={() => {
+                setShowModal((prev) => !prev), setData(item);
+              }}
+              ref={cardRef}
+            >
+              <CaseStudyCard img={item.img} brand={item.brand} duration={item.duration} />
+            </div>
+          ))}
+          <Modal
+            show={showModal}
+            onClick={() => setShowModal((prev) => !prev)}
+            brand={data.brand}
+            img={data.img}
+            objective={data.objective}
+            location={data.location}
+            duration={data.duration}
+            outcome={data.outcome}
+          />
         </div>
+
+        {/* Right Button */}
+        <button onClick={scrollRight} className="absolute right-0 top-1/2 z-10">
+          <ArrowRightCircleIcon className="h-10 w-10 text-white max-md:h-6 max-md:w-6" />
+        </button>
       </div>
     </section>
   );
