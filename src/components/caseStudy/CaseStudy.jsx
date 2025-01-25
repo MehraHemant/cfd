@@ -7,7 +7,7 @@ import { Heading } from '../Heading';
 import { Modal } from '../ui/modal';
 import Image from 'next/image';
 
-function CaseStudyCard({ img, brand, duration }) {
+function CaseStudyCard({ img, brand }) {
   return (
     <div className="group flex flex-col gap-6 rounded-br-3xl rounded-tl-3xl bg-white bg-white/60 p-8">
       <div className="relative">
@@ -15,12 +15,7 @@ function CaseStudyCard({ img, brand, duration }) {
         <div className={`absolute -left-2 -top-2 z-0 h-1/2 w-1/2 bg-primary transition-all duration-300 group-hover:translate-x-[calc(100%+16px)] group-hover:bg-secondary`} />
         <div className="absolute -bottom-2 -right-2 z-0 h-1/2 w-1/2 bg-secondary transition-all duration-300 group-hover:-translate-x-[calc(100%+16px)] group-hover:bg-primary" />
       </div>
-      <div className="text-center">
-        <h2 className="text-lg font-bold uppercase">{brand}</h2>
-        <h4 className="text-md">
-          <b>Duration</b> : {duration}
-        </h4>
-      </div>
+        <h2 className="text-lg font-bold uppercase text-center">{brand}</h2>
     </div>
   );
 }
@@ -69,7 +64,7 @@ export function CaseStudy() {
               }}
               ref={cardRef}
             >
-              <CaseStudyCard img={item.img} brand={item.brand} duration={item.duration} />
+              <CaseStudyCard img={item.img} brand={item.brand} />
             </div>
           ))}
           <Modal
