@@ -11,7 +11,7 @@ function CaseStudyCard({ img, brand, duration }) {
   return (
     <div className="group flex flex-col gap-6 rounded-br-3xl rounded-tl-3xl bg-white bg-white/60 p-8">
       <div className="relative">
-        <Image src={img} className="relative z-10 w-full" alt="case study" width={400} height={300} />
+        <Image src={img} priority className="relative z-10 w-full" alt="case study" width={300} height={300} />
         <div className={`absolute -left-2 -top-2 z-0 h-1/2 w-1/2 bg-primary transition-all duration-300 group-hover:translate-x-[calc(100%+16px)] group-hover:bg-secondary`} />
         <div className="absolute -bottom-2 -right-2 z-0 h-1/2 w-1/2 bg-secondary transition-all duration-300 group-hover:-translate-x-[calc(100%+16px)] group-hover:bg-primary" />
       </div>
