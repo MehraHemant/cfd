@@ -17,7 +17,7 @@ export function ServicePageCard({
       )}
     >
       <div className="max-w-xl w-full p-8 max-lg:p-6">
-        <img src={imgSrc} className="aspect-video object-cover object-top" alt={imgAlt} />
+        <img src={imgSrc} className="aspect-video w-full object-cover object-top" alt={imgAlt} />
       </div>
       <div className="col-span-2 w-full text-center">
         <div className="mb-2 flex flex-col items-center gap-2 max-lg:gap-2 max-md:gap-1">

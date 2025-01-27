@@ -12,16 +12,16 @@ export default function ATLServices() {
       <section className="bg-primary py-10 text-white max-md:py-4 max-sm:py-2">
         <div className="flex flex-col items-center gap-2 pb-2 max-sm:pb-8 max-md:gap-0.5 max-md:py-3 max-sm:gap-0">
           <h2 className="font-sans text-6xl font-extrabold uppercase text-white max-lg:text-4xl max-lg:font-bold max-md:text-3xl max-sm:text-2xl">
-            atl services{" "}
+            atl services
           </h2>
           <div className="max h-1 w-48 bg-white max-lg:h-0.5 max-lg:w-36"></div>
         </div>
         <div className="mx-auto max-w-xl text-center text-3xl max-lg:text-xl">
-          We deliver{" "}
+          We deliver
           <span className="font-rubik text-4xl font-thin uppercase max-lg:text-2xl max-md:text-xl">
-            advertisement{" "}
-          </span>{" "}
-          in a truly{" "}
+            advertisement
+          </span>
+          in a truly
           <span className="font-rubik text-4xl font-thin uppercase max-lg:text-2xl max-md:text-xl">
             exciting, innovative and creative way
           </span>

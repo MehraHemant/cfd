@@ -28,7 +28,7 @@ export const caseStudies = [
   },
   {
     brand: 'Viksit Bharat',
-    img: '/images/case_study/viksit_bharat.png',
+    img: '/images/case_study/Viksit-Bharat.jpg',
     objective: "The Government of India aimed to reach out to all 3 lakh Gram Panchayats to inform them about various government initiatives such as Ayushman Bharat Yojana, Ujjwala Yojana, and Vishwakarma Yojana. The objective was also to review the impact of these schemes, with the Honorable Prime Minister personally connecting with the direct beneficiaries. ", 
     reach: '',
     location: ' Jammu & Kashmir, Bihar, West Bengal, Jharkhand, West Bengal',
