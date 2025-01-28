@@ -25,7 +25,7 @@ export function Modal({ show, onClick, brand, img, objective, location, duration
               {outcome.length > 0 && (
                 <>
                   <p className="text-sm font-semibold text-gray-700">Outcome :</p>
-                  <ul className="list-inside list-disc pl-2">
+                  <ul className="pl-3 list-disc">
                     {outcome.map((item, idx) => (
                       <li key={idx} className="text-sm text-gray-700">
                         {item}

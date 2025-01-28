@@ -33,7 +33,7 @@ export function ServicePageCard({
           {description}
         </p>
         {listItem ? (
-          <ul className="list mt-3 list-inside max-md:text-sm *:text-nowrap max-sm:px-3 list-[disclosure-closed] gap-x-6 justify-center flex flex-wrap text-lg font-semibold grid-cols-2 text-left max-lg:text-base/snug">
+          <ul className="list mt-3 pl-3 max-md:text-sm *:text-nowrap max-sm:px-3 list-[disclosure-closed] gap-x-6 justify-center flex flex-wrap text-lg font-semibold grid-cols-2 text-left max-lg:text-base/snug">
             {listItem.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}

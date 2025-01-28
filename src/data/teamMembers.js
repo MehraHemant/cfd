@@ -5,7 +5,7 @@ export const teamMembers = [
     image: '/images/teams/ujjwal.jpg',
     alt: 'ujjwal',
     subtitle: 'Engineer. MBA. Visionary Leader.',
-    description: `By day, Ujjwal is a passionate marketing professional, steering our company with strategic acumen and a relentless drive for success. 
+    description: `By day, Ujjawal is a passionate marketing professional, steering our company with strategic acumen and a relentless drive for success. 
         With a sharp engineering mind and a robust business background, he brings a unique blend of technical expertise and managerial prowess to the table.`,
   },
   {
