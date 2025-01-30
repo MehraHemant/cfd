@@ -51,13 +51,13 @@ export function Footer() {
         Noida Uttar Pradesh 201309
       </address>
       <div className="pt-4 flex items-center justify-center gap-3 py-2">
-        <Link href="" target="_blank" className="w-8 h-8">
+        <Link href="https://youtube.com/@chaltifirtidukaan?si=1X9gonraa8xAZ-hI" target="_blank" className="w-8 h-8">
           <YoutubeIcon />
         </Link>
         <Link href="https://www.instagram.com/vistaar_media/?igsh=MWY1aDZzbTY0ZHBucw%3D%3D" target="_blank" className="w-6 h-6">
           <InstagramIcon />
         </Link>
-        <Link href="" target="_blank" className="w-5 h-5">
+        <Link href="https://www.facebook.com/profile.php?id=100077792111018" target="_blank" className="w-5 h-5">
           <FacebookIcon />
         </Link>
       </div>
