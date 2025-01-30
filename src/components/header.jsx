@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -34,9 +35,12 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-white/80 drop-shadow-xl backdrop-blur-3xl">
       <div className="relative flex h-20 min-h-16 w-full justify-center bg-white">
         <div className="bg-primary h-12 w-full"></div>
-        <img
+        <Image
+        priority
+          width={150}
+          height={150}
           src="/images/CFD-Logo.png"
-          className="absolute top-1.5 h-16"
+          className="absolute object-contain top-1.5 h-16"
         alt="logo"
         />
       </div>

@@ -1,24 +1,19 @@
-'use client'
+'use client';
 
-import React, { useState, useEffect } from "react";
+import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
 
-
-export function Carousel({slides, intervalTime = 5000}) {
-
+export function Carousel({ slides, intervalTime = 5000 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Function to move to the next slide
   const goToNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
   };
 
   // Function to move to the previous slide
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1));
   };
 
   // Autoplay logic
@@ -30,12 +25,15 @@ export function Carousel({slides, intervalTime = 5000}) {
   }, []);
 
   return (
-    <div className="relative w-full mx-auto">
+    <div className="relative mx-auto w-full">
       <div className="overflow-hidden">
-        <img
+        <Image
+          width={2000}
+          height={2000}
+          priority
           src={slides[currentIndex]}
           alt={`Slide ${currentIndex + 1}`}
-          className="w-full aspect-[5/2] max-sm:aspect-[5/3] object-cover object-center transition duration-700 ease-in-out"
+          className="aspect-[5/2] w-full object-cover object-center transition duration-700 ease-in-out max-sm:aspect-[5/3]"
         />
       </div>
 
@@ -56,20 +54,15 @@ export function Carousel({slides, intervalTime = 5000}) {
       </button> */}
 
       {/* Indicators */}
-      <div className="flex justify-center mb-3 mt-1 space-x-2">
+      <div className="mb-3 mt-1 flex justify-center space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-3 max-sm:h-px h-1 rounded-full ${
-              index === currentIndex
-                ? "bg-blue-600"
-                : "bg-gray-400 hover:bg-gray-600"
-            }`}
+            className={`h-1 w-3 rounded-full max-sm:h-px ${index === currentIndex ? 'bg-blue-600' : 'bg-gray-400 hover:bg-gray-600'}`}
           ></button>
         ))}
       </div>
     </div>
   );
-};
-
+}
