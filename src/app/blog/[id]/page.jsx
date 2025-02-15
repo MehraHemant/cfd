@@ -36,7 +36,7 @@ export default function Page() {
     if (id) {fetchRecent(); fetchData();};
   }, [id]);
 
-  if (!data || !recent) return <p>Loading...</p>;
+  if (!data || !recent) return <div className='h-svh'/>
 
   return (
     <div className="mx-40 my-10 grid grid-cols-7 gap-5">
@@ -46,7 +46,7 @@ export default function Page() {
           <p className="text-right italic">Published on {new Date(data.published_at).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' })}</p>
         </div>
         <h1 className="text-4xl font-bold">{data.title}</h1>
-        <p dangerouslySetInnerHTML={{ __html: data.metadata.content }} />
+        <p dangerouslySetInnerHTML={{ __html: data.metadata.content }} className='px-3'/>
       </div>
       <div className="col-span-2 flex flex-col gap-4">
         <h2 className="text-2xl font-semibold">Recent Blogs</h2>

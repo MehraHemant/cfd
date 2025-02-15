@@ -52,13 +52,12 @@ export function Header() {
           Home
         </Link>
         <Link
-          href="/#humari-pehchan"
+          href="/blog"
           className={twMerge(
-            "max-lg:hidden",
-            hash === "#humari-pehchan" ? "selected" : ""
+            path === "/blog" ? "selected" : ""
           )}
         >
-          Humari Pehchan
+          Blogs
         </Link>
         <div className="group relative h-full">
           <span

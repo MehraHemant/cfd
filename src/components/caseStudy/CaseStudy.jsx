@@ -15,7 +15,7 @@ function CaseStudyCard({ img, brand }) {
         <div className={`absolute -left-2 -top-2 z-0 h-1/2 w-1/2 bg-primary transition-all duration-300 group-hover:translate-x-[calc(100%+16px)] group-hover:bg-secondary`} />
         <div className="absolute -bottom-2 -right-2 z-0 h-1/2 w-1/2 bg-secondary transition-all duration-300 group-hover:-translate-x-[calc(100%+16px)] group-hover:bg-primary" />
       </div>
-        <h2 className="text-lg font-bold uppercase text-center">{brand}</h2>
+      <h2 className="text-center text-lg font-bold uppercase">{brand}</h2>
     </div>
   );
 }

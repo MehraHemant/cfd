@@ -1,2 +1,10 @@
 export * from './teams';
-export {BlogCard} from './BlogCard.jsx'
+export { BlogCard } from './BlogCard.jsx';
+export { Header } from './header.jsx';
+export { Footer } from './footer.jsx';
+export {Carousel } from './Carousel.jsx';
+export {Heading } from './Heading.jsx';
+export {HeroSection } from './HeroSection.jsx';
+export * from './ui';
+export * from './benefits';
+export * from './service';
