@@ -11,7 +11,7 @@ import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
-  const HeroCarouselSlides = ['/images/gadi.png', '/images/gadi.png'];
+  const HeroCarouselSlides = ['/images/landing_banner.jpg'];
   const [inputs, setInputs] = useState({ name: '', phone: '', email: '', message: '' });
 
   const handleInputChange = (e) => {

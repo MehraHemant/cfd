@@ -39,7 +39,7 @@ export const teamMembers = [
   {
     id: 5,
     title: 'Ashwani',
-    image: '/images/teams/IMG_9412.jpg',
+    image: '/images/teams/Ashwani.png',
     alt: 'avatar',
     subtitle: 'Operations Manager',
     description: `Meet Ashwani, the dynamic Operations Head who infuses every project with his boundless passion and innate kindness. 
@@ -60,7 +60,7 @@ export const teamMembers = [
     image: '/images/teams/Heena.jpg',
     alt: 'heena',
     subtitle: 'HR Proffesional',
-    description: `Meet Heena our beloved HR professional at ourCompany. With over 6 years of rich experience across various sectors, she brings unparalleled expertise to our team. Whether it's work-related or personal, Heena is always there to support us with a cheerful atitude.`,
+    description: `Meet Heena our beloved HR professional at ourCompany. With over 6 years of rich experience across various sectors, she brings unparalleled expertise to our team. Whether it's work-related or personal, Heena is always there to support us with a cheerful attitude.`,
   },
   {
     id: 8,

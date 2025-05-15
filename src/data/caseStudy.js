@@ -1,8 +1,33 @@
 export const caseStudies = [
   {
+    brand: 'Maha Kumbh',
+    img: '/images/case_study/maha-kumbh.jpg',
+    objective: [
+      '🚤 <strong>Boat Branding</strong>: Strategically branded boats across the ghats ensured continuous visibility on the water routes, creating a strong visual identity amidst religious congregations.',
+      '🔌 <strong>Branded Charging Station</strong>: Installed at key congregation points, these helped pilgrims recharge their phones while interacting with the brand – a utility-led engagement model.',
+      '🎁 <strong>Sampling and Product Trial</strong>: Conducted large-scale free sampling drives with trained promoters across camps, giving attendees a first-hand brand experience in a spiritually charged environment.',
+    ],
+    reach: '',
+    location: 'Prayagraj, Uttar Pradesh',
+    duration: '45 Days (Jan 13 - Feb 27, 2025)',
+    outcome: [],
+  },
+  {
+    brand: 'Falguni Mela',
+    img: '/images/case_study/lakhi-mela-3.jpg',
+    objective: [
+      '🔒 <strong>Secured Exclusive Advertising Rights</strong>: Janaadesh collaborated with the Sikar Administration to obtain exclusive media rights for the iconic Falguni Mela.',
+      '🤝 <strong>Top-Tier Brand Partnerships</strong>: Enabled strategic brand presence for industry leaders such as Dabur, Shree Cement, Ambuja Cements, and Urja Global — ensuring maximum exposure to millions of visitors.',
+    ],
+    reach: '',
+    location: 'Khatu Shyam Ji Temple in Khatu, Sikar, Rajasthan',
+    duration: '13 Days',
+    outcome: [],
+  },
+  {
     brand: 'Avon',
     img: '/images/case_study/avon.jpeg',
-    objective: 'To promote franchise stores and establish strong visibility among distribution',
+    objective: ['To promote franchise stores and establish strong visibility among distribution'],
     reach: '4K-8K/Day',
     location: 'Mumbai, Delhi, Rajasthan, Punjab, Bihar, Orissa',
     duration: '45 Days',
@@ -11,7 +36,7 @@ export const caseStudies = [
   {
     brand: 'Girdhar',
     img: '/images/case_study/girdhar.jpeg',
-    objective: "To promote and sample the brand's product, generating impulsive demand", 
+    objective: ["To promote and sample the brand's product, generating impulsive demand"],
     reach: '8K-10K/Day',
     location: 'Bihar, West Bangal',
     duration: '60 Days',
@@ -20,20 +45,52 @@ export const caseStudies = [
   {
     brand: 'Pintola',
     img: '/images/case_study/pintola.jpeg',
-    objective: "To grab public attention via the 'truck campaign' featuring Suryakumar Yadav and a 3D peanut butter jar.", 
+    objective: ["To grab public attention via the 'truck campaign' featuring Suryakumar Yadav and a 3D peanut butter jar."],
     reach: '15K+ audience/Day',
     location: 'Mumbai, Bangalore, Delhi, Gujarat, Uttar Pradesh, Banaras, Kolkata, Orissa, Assam, Rajasthan, Chandigarh, Punjab, Haryana',
     duration: '30 Days',
-    outcome: ['Captured 15K+ audience attention/day', 'Offline campaign created online buzz reaching millions', 'Engaged 10K+ people', 'Grew IG followers by 50% and YouTube by 10%'],
+    outcome: [
+      'Captured 15K+ audience attention/day',
+      'Offline campaign created online buzz reaching millions',
+      'Engaged 10K+ people',
+      'Grew IG followers by 50% and YouTube by 10%',
+    ],
   },
   {
     brand: 'Viksit Bharat',
     img: '/images/case_study/Viksit-Bharat.jpg',
-    objective: "The Government of India aimed to reach out to all 3 lakh Gram Panchayats to inform them about various government initiatives such as Ayushman Bharat Yojana, Ujjwala Yojana, and Vishwakarma Yojana. The objective was also to review the impact of these schemes, with the Honorable Prime Minister personally connecting with the direct beneficiaries. ", 
+    objective: [
+      'The Government of India aimed to reach out to all 3 lakh Gram Panchayats to inform them about various government initiatives such as Ayushman Bharat Yojana, Ujjwala Yojana, and Vishwakarma Yojana. The objective was also to review the impact of these schemes, with the Honorable Prime Minister personally connecting with the direct beneficiaries. ',
+    ],
     reach: '',
     location: ' Jammu & Kashmir, Bihar, West Bengal, Jharkhand, West Bengal',
     duration: '',
     outcome: [],
   },
-  
+  {
+    brand: 'Falguni Mela',
+    img: '/images/case_study/lakhi-mela-2.jpg',
+    objective: [
+      '📅 <strong>12 Days of High-Impact Engagement</strong>: Over 12 festive days, brands experienced continuous, multi-platform visibility across the entire mela zone.',
+      '📍 <strong>Billboards & Arch Gates</strong>: Strategically installed in high footfall areas to drive brand recall and create grand entry experiences.',
+      '🎈 <strong>Sky Balloons</strong>: Captivated the skies with floating branding—offering aerial visibility and mass attention.',
+    ],
+    reach: '',
+    location: 'Khatu Shyam Ji Temple in Khatu, Sikar, Rajasthan',
+    duration: '13 Days',
+    outcome: [],
+  },
+  {
+    brand: 'Falguni Mela',
+    img: '/images/case_study/lakhi-mela.jpg',
+    objective: [
+      '🚚 <strong>LED & T-Shape Vans</strong>: Delivered mobile, illuminated storytelling directly to the crowd—blending movement and message.',
+      '🏕️ <strong>Stalls & Police Booths</strong>: Enabled direct, trust-building interaction between brands and attendees at the ground level.',
+      '🆘 <strong>Help Centers & Public Utilities</strong>: Integrated branding into essential services, ensuring continuous visibility while serving public needs.'
+    ],
+    reach: '',
+    location: 'Khatu Shyam Ji Temple in Khatu, Sikar, Rajasthan',
+    duration: '13 Days',
+    outcome: [],
+  },
 ];

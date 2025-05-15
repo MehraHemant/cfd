@@ -8,8 +8,10 @@ export function Modal({ show, onClick, brand, img, objective, location, duration
           <div className="flex w-full max-md:flex-col">
             <Image src={img} className="aspect-square grow w-full max-w-sm object-contain max-sm:aspect-video" alt="case study" width={400} height={300} />
             <div className="flex flex-col gap-1 p-4 grow w-full">
-              <h3 className="max-md:text-md text-xl font-bold">{brand}</h3>
-              <h4 className="text-sm/snug">{objective}</h4>
+              <h3 className="max-md:text-md text-xl font-bold mb-2">{brand}</h3>
+              <div>
+              {objective.map((text, index)=> <h4 className="text-sm/snug mb-1" key={index} dangerouslySetInnerHTML={{__html: text}}/>)}
+              </div>
               {location && (
                 <p className="text-sm text-gray-700">
                   <b>Location : </b>
