@@ -1,38 +1,20 @@
-export function DoubleQuotesIcon() {
-  return (
-    <svg
-      height="200px"
-      width="200px"
-      version="1.1"
-      id="Capa_1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      viewBox="0 0 32 32"
-      xmlSpace="preserve"
-      fill="currentcolor"
-    >
-      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-      <g
-        id="SVGRepo_tracerCarrier"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      ></g>
-      <g id="SVGRepo_iconCarrier">
-        <g>
-          <g id="right_x5F_quote">
-            <g>
-              <path
-                style="fill:#030104;"
-                d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z"
-              ></path>
-              <path
-                style="fill:#030104;"
-                d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z"
-              ></path>
-            </g>
-          </g>
-        </g>
-      </g>
-    </svg>
-  );
-}
+export const DoubleQuotesIcon = ({
+  height = "1em",
+  fill = "currentColor",
+  focusable = "false",
+  ...props
+}) => (
+  <svg
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    height={height}
+    focusable={focusable}
+    {...props}
+  >
+    <path
+      fill={fill}
+      d="M20.309 17.708C22.196 15.66 22.006 13.03 22 13V5a1 1 0 0 0-1-1h-6c-1.103 0-2 .897-2 2v7a1 1 0 0 0 1 1h3.078a2.89 2.89 0 0 1-.429 1.396c-.508.801-1.465 1.348-2.846 1.624l-.803.16V20h1c2.783 0 4.906-.771 6.309-2.292m-11.007 0C11.19 15.66 10.999 13.03 10.993 13V5a1 1 0 0 0-1-1h-6c-1.103 0-2 .897-2 2v7a1 1 0 0 0 1 1h3.078a2.89 2.89 0 0 1-.429 1.396c-.508.801-1.465 1.348-2.846 1.624l-.803.16V20h1c2.783 0 4.906-.771 6.309-2.292"
+    />
+  </svg>
+);

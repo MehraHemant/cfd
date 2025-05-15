@@ -7,11 +7,12 @@ import { ServiceCard } from '@/components/service';
 import { TeamCard } from '@/components/teams/TeamCard';
 import { Polygon } from '@/components/ui/polygon';
 import { teamMembers } from '@/data/teamMembers';
+import { DoubleQuotesIcon } from '@/icons';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
-  const HeroCarouselSlides = ['/images/landing_banner.jpg'];
+  const HeroCarouselSlides = ['/images/landing_banner.jpg', '/videos/landing-video.mp4', '/images/gadi.png'];
   const [inputs, setInputs] = useState({ name: '', phone: '', email: '', message: '' });
 
   const handleInputChange = (e) => {
@@ -114,8 +115,8 @@ export default function Home() {
           </p>
           <h5 className="mt-3 pr-8 text-right text-lg/4 italic max-sm:text-sm/4">- Avon Cycles Team</h5>
           <h5 className="pr-8 text-right text-lg italic max-sm:text-sm/4">(Odisha Campaign)</h5>
-          <span className="absolute -right-5 bottom-10 flex aspect-square w-10 items-center justify-center rounded-full border bg-white font-didact text-4xl">
-            {/* <DoubleQuotesIcon /> */}
+          <span className="absolute -right-5 bottom-10 flex aspect-square w-10 h-10 items-center justify-center rounded-full border bg-white font-didact text-4xl">
+            <DoubleQuotesIcon width={26} height={26} />
           </span>
         </div>
       </section>
