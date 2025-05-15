@@ -16,8 +16,34 @@ export const caseStudies = [
     brand: 'Falguni Mela',
     img: '/images/case_study/lakhi-mela-3.jpg',
     objective: [
+      '🚚 <strong>LED & T-Shape Vans</strong>: Delivered mobile, illuminated storytelling directly to the crowd—blending movement and message.',
       '🔒 <strong>Secured Exclusive Advertising Rights</strong>: Janaadesh collaborated with the Sikar Administration to obtain exclusive media rights for the iconic Falguni Mela.',
+      '🤝 <strong>Top-Tier Brand Partnerships</strong>: Enabled strategic brand presence for industry leaders such as Dabur, Shree Cement, Ambuja Cements, and Urja Global — ensuring maximum exposure to millions of visitors.'],
+    reach: '',
+    location: 'Khatu Shyam Ji Temple in Khatu, Sikar, Rajasthan',
+    duration: '12 Days',
+    outcome: [],
+  },
+  {
+    brand: 'Falguni Mela',
+    img: '/images/case_study/lakhi-mela-2.jpg',
+    objective: [
+      '📅 <strong>12 Days of High-Impact Engagement</strong>: Over 12 festive days, brands experienced continuous, multi-platform visibility across the entire mela zone.',
+      '📍 <strong>Billboards & Arch Gates</strong>: Strategically installed in high footfall areas to drive brand recall and create grand entry experiences.',
+      '🎈 <strong>Sky Balloons</strong>: Captivated the skies with floating branding—offering aerial visibility and mass attention.',
+    ],
+    reach: '',
+    location: 'Khatu Shyam Ji Temple in Khatu, Sikar, Rajasthan',
+    duration: '13 Days',
+    outcome: [],
+  },
+  {
+    brand: 'Falguni Mela',
+    img: '/images/case_study/lakhi-mela.jpg',
+    objective: [
       '🤝 <strong>Top-Tier Brand Partnerships</strong>: Enabled strategic brand presence for industry leaders such as Dabur, Shree Cement, Ambuja Cements, and Urja Global — ensuring maximum exposure to millions of visitors.',
+      '🏕️ <strong>Stalls & Police Booths</strong>: Enabled direct, trust-building interaction between brands and attendees at the ground level.',
+      '🆘 <strong>Help Centers & Public Utilities</strong>: Integrated branding into essential services, ensuring continuous visibility while serving public needs.',
     ],
     reach: '',
     location: 'Khatu Shyam Ji Temple in Khatu, Sikar, Rajasthan',
@@ -65,32 +91,6 @@ export const caseStudies = [
     reach: '',
     location: ' Jammu & Kashmir, Bihar, West Bengal, Jharkhand, West Bengal',
     duration: '',
-    outcome: [],
-  },
-  {
-    brand: 'Falguni Mela',
-    img: '/images/case_study/lakhi-mela-2.jpg',
-    objective: [
-      '📅 <strong>12 Days of High-Impact Engagement</strong>: Over 12 festive days, brands experienced continuous, multi-platform visibility across the entire mela zone.',
-      '📍 <strong>Billboards & Arch Gates</strong>: Strategically installed in high footfall areas to drive brand recall and create grand entry experiences.',
-      '🎈 <strong>Sky Balloons</strong>: Captivated the skies with floating branding—offering aerial visibility and mass attention.',
-    ],
-    reach: '',
-    location: 'Khatu Shyam Ji Temple in Khatu, Sikar, Rajasthan',
-    duration: '13 Days',
-    outcome: [],
-  },
-  {
-    brand: 'Falguni Mela',
-    img: '/images/case_study/lakhi-mela.jpg',
-    objective: [
-      '🚚 <strong>LED & T-Shape Vans</strong>: Delivered mobile, illuminated storytelling directly to the crowd—blending movement and message.',
-      '🏕️ <strong>Stalls & Police Booths</strong>: Enabled direct, trust-building interaction between brands and attendees at the ground level.',
-      '🆘 <strong>Help Centers & Public Utilities</strong>: Integrated branding into essential services, ensuring continuous visibility while serving public needs.'
-    ],
-    reach: '',
-    location: 'Khatu Shyam Ji Temple in Khatu, Sikar, Rajasthan',
-    duration: '13 Days',
     outcome: [],
   },
 ];

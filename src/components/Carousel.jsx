@@ -48,6 +48,7 @@ export function Carousel({ slides, intervalTime = 7000 }) {
           />
         ) : (
           <video
+            key={slides[currentIndex]}
             width="320"
             height="240"
             autoPlay
