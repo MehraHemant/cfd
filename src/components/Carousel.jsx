@@ -61,7 +61,6 @@ export function Carousel({ slides, intervalTime = 7000 }) {
           </video>
         )}
       </div>
-
       {/* Previous Button */}
       <button
         onClick={goToPrevious}
