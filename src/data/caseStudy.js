@@ -1,6 +1,6 @@
 export const caseStudies = [
   {
-    brand: 'Maha Kumbh',
+    brand: 'Maha Kumbh - 2025',
     img: '/images/case_study/maha-kumbh.jpg',
     objective: [
       '🚤 <strong>Boat Branding</strong>: Strategically branded boats across the ghats ensured continuous visibility on the water routes, creating a strong visual identity amidst religious congregations.',
@@ -13,7 +13,7 @@ export const caseStudies = [
     outcome: [],
   },
   {
-    brand: 'Falguni Mela',
+    brand: 'Falguni Mela - 2025',
     img: '/images/case_study/lakhi-mela-3.jpg',
     objective: [
       '🚚 <strong>LED & T-Shape Vans</strong>: Delivered mobile, illuminated storytelling directly to the crowd—blending movement and message.',
@@ -25,7 +25,7 @@ export const caseStudies = [
     outcome: [],
   },
   {
-    brand: 'Falguni Mela',
+    brand: 'Falguni Mela - 2025',
     img: '/images/case_study/lakhi-mela-2.jpg',
     objective: [
       '📅 <strong>12 Days of High-Impact Engagement</strong>: Over 12 festive days, brands experienced continuous, multi-platform visibility across the entire mela zone.',
@@ -34,7 +34,7 @@ export const caseStudies = [
     ],
     reach: '',
     location: 'Khatu Shyam Ji Temple in Khatu, Sikar, Rajasthan',
-    duration: '13 Days',
+    duration: '12 Days',
     outcome: [],
   },
   {
@@ -47,7 +47,7 @@ export const caseStudies = [
     ],
     reach: '',
     location: 'Khatu Shyam Ji Temple in Khatu, Sikar, Rajasthan',
-    duration: '13 Days',
+    duration: '12 Days',
     outcome: [],
   },
   {
