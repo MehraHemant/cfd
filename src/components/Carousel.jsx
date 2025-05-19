@@ -44,7 +44,7 @@ export function Carousel({ slides, intervalTime = 7000 }) {
             priority
             src={slides[currentIndex]}
             alt={`Slide ${currentIndex + 1}`}
-            className="aspect-[5/2] w-full object-cover object-center transition duration-700 ease-in-out max-sm:aspect-[5/3]"
+            className="aspect-[5/2] w-full object-cover object-center transition duration-700 ease-in-out"
           />
         ) : (
           <video
@@ -55,7 +55,7 @@ export function Carousel({ slides, intervalTime = 7000 }) {
             loop
             muted
             preload="auto"
-            className="aspect-[5/2] w-full object-cover object-center transition duration-700 ease-in-out max-sm:aspect-[5/3]"
+            className="aspect-[5/2] w-full object-cover object-center transition duration-700 ease-in-out"
           >
             <source src={slides[currentIndex]} type="video/mp4" />
           </video>
