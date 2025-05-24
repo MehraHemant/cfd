@@ -12,7 +12,7 @@ import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
-  const HeroCarouselSlides = ['/images/landing_banner.jpg', 'https://res.cloudinary.com/dyccxskji/video/upload/v1747493509/picdvjqjmbvfkh6eqaic.mp4', '/images/gadi.png'];
+  const HeroCarouselSlides = ['/images/Shree_Jagannath_Rath_Yatra_Website_Banner.jpg','/images/landing_banner.jpg', 'https://res.cloudinary.com/dyccxskji/video/upload/v1747493509/picdvjqjmbvfkh6eqaic.mp4', '/images/gadi.png'];
   const [inputs, setInputs] = useState({ name: '', phone: '', email: '', message: '' });
 
   const handleInputChange = (e) => {
