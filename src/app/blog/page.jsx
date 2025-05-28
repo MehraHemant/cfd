@@ -20,7 +20,7 @@ export default async function Page() {
       </div>
       <div className="max-w-screen-xl mx-auto gap-2 grid max-2xl:px-2 my-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
           {blogs.map((blog, idx) => (
-            <BlogCard key={blog.id} title={blog.title} publishedAt={blog.published_at} content={blog.metadata.content} id={blog.id} imgSrc={blog.metadata.src.url} />
+            <BlogCard key={blog?.id} title={blog?.title} publishedAt={blog?.published_at} content={blog?.metadata?.content} id={blog?.id} imgSrc={blog?.metadata?.src?.url} />
           ))}
       </div>
     </>
