@@ -1,3 +1,5 @@
+export const revalidate = 0;
+
 import { BlogCard } from '@/components';
 import { createBucketClient } from '@cosmicjs/sdk';
 import Image from 'next/image';
