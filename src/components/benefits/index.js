@@ -1,1 +1,1 @@
-export {BenefitCard } from './BenefitCard';
+export { BenefitCard } from './BenefitCard';
