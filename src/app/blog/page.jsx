@@ -13,17 +13,15 @@ export default async function Page() {
   return (
     <>
       <div className="relative w-full">
-        <Image src="/images/blog.webp" className="w-full aspect-[16/4] object-cover" width={1500} height={1500} alt="logo" />
+        <Image src="/images/blog.webp" className="w-full aspect-[16/4] max-lg:aspect-[16/8] object-cover" width={1500} height={1500} alt="logo" />
         <div className="absolute left-12 bottom-1/3">
-          <h2 className='text-6xl font-semibold text-white'>Blogs</h2>
+          <h2 className='text-6xl max-lg:text-4xl font-semibold text-white'>Blogs</h2>
         </div>
       </div>
-      <div className="mx-40 my-10 grid grid-cols-3">
-        <div className="col-span-3 grid grid-cols-3 gap-5 p-4">
+      <div className="max-w-screen-xl mx-auto gap-2 grid max-2xl:px-2 my-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
           {blogs.map((blog, idx) => (
             <BlogCard key={blog.id} title={blog.title} publishedAt={blog.published_at} content={blog.metadata.content} id={blog.id} imgSrc={blog.metadata.src.url} />
           ))}
-        </div>
       </div>
     </>
   );

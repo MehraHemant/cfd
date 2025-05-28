@@ -33,27 +33,40 @@ export default function Page() {
         console.error('Error fetching data:', error);
       }
     }
-    if (id) {fetchRecent(); fetchData();};
+    if (id) {
+      fetchRecent();
+      fetchData();
+    }
   }, [id]);
 
-  if (!data || !recent) return <div className='h-svh'/>
+  if (!data || !recent) return <div className="h-svh" />;
 
   return (
-    <div className="mx-40 my-10 grid grid-cols-7 gap-5">
+    <div className="mx-auto my-10 grid max-w-screen-xl grid-cols-7 gap-5 max-2xl:flex max-2xl:flex-col max-2xl:px-2">
       <div className="col-span-5 flex flex-col gap-6">
         <div className="flex flex-col gap-2">
-          <Image className="aspect-[5/2] w-full object-cover" src={data.metadata.src.url} alt={data.title} width={2000} height={2000} priority />
-          <p className="text-right italic">Published on {new Date(data.published_at).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' })}</p>
+          <Image className="aspect-[5/3] xl:aspect-[7/3] w-full object-cover" src={data.metadata.src.url} alt={data.title} width={2000} height={2000} priority />
+          <p className="text-right text-sm text-gray-500">
+            Published on {new Date(data.published_at).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' })}
+          </p>
         </div>
-        <h1 className="text-4xl font-bold">{data.title}</h1>
-        <p dangerouslySetInnerHTML={{ __html: data.metadata.content }} className='px-3'/>
+        <h1 className="text-3xl font-bold">{data.title}</h1>
+        <p dangerouslySetInnerHTML={{ __html: data.metadata.content }} className="" />
       </div>
+      <hr className="2xl:hidden" />
       <div className="col-span-2 flex flex-col gap-4">
-        <h2 className="text-2xl font-semibold">Recent Blogs</h2>
-        {recent &&
-          recent.map((blog, idx) =>
-            blog.id !== id ? <BlogCard key={idx} id={blog.id} title={blog.title} imgSrc={blog.metadata.src.url} publishedAt={blog.published_at} /> : null
-          )}
+        <h2 className="text-xl/snug font-semibold">Recent Blogs</h2>
+        <hr className='max-2xl:hidden'/>
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 2xl:flex 2xl:flex-col">
+          {recent &&
+            recent.map((blog, idx) =>
+              blog.id !== id ? (
+                <div key={idx} className='h-full'>
+                  <BlogCard id={blog.id} title={blog.title} imgSrc={blog.metadata.src.url} publishedAt={blog.published_at} />
+                </div>
+              ) : null
+            )}
+        </div>
       </div>
     </div>
   );

@@ -1,15 +1,23 @@
-'use client'
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export function BlogCard({ id, title, imgSrc, publishedAt }) {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push(`/blog/${id}`);
+  };
   return (
-    <div className="flex flex-col gap-6 rounded-lg bg-gray-100 hover:box-content p-4 hover:shadow-xl shadow-primary transition-all duration-300">
-      <Image src={imgSrc} priority className="aspect-square w-full object-cover rounded-md transition-all duration-300" alt={title} width={300} height={200} />
-      <div className="h-full flex-col flex px-2 transition-all duration-300 gap-4">
-      <h2 className="text-xl/snug font-didact font-semibold cursor-default">{title}</h2>
-      <Link href={`/blog/${id}`} className='text-lg text-primary font-semibold'>Read More ...</Link>
-        <p className="text-md font-didact">{new Date(publishedAt).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' })}</p>
+    <div onClick={handleClick} className="flex w-full group flex-col gap-3 rounded-lg bg-gray-100 p-4 shadow-primary transition-all duration-300 hover:shadow-xl cursor-pointer">
+      <Image src={imgSrc} priority className="w-full rounded-md object-cover transition-all duration-300 aspect-[5/3]" alt={title} width={300} height={200} />
+      <div className="flex h-full flex-col px-2 transition-all duration-300">
+        <p className="line-clamp-2 h-12 overflow-hidden text-lg/snug font-didact font-medium group-hover:underline">
+          {title}
+        </p>
+        <p className="mt-2 text-right font-didact text-sm/snug text-gray-500">
+          {'Published On : ' + new Date(publishedAt).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' })}
+        </p>
       </div>
     </div>
   );
