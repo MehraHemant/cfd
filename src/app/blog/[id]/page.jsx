@@ -12,8 +12,8 @@ export default function Page() {
 
   useEffect(() => {
     const cosmic = createBucketClient({
-      bucketSlug: 'cfd-production',
-      readKey: 'wK1z1cMsX2l4xBGGJ7VeXrlhiJKcAVYexYQvGpc7n7FD9d18tD',
+      bucketSlug: process.env.NEXT_PUBLIC_COSMICJS_BUCKET_SLUG,
+      readKey: process.env.NEXT_PUBLIC_COSMICJS_READ_KEY,
     });
 
     async function fetchData() {
@@ -45,23 +45,23 @@ export default function Page() {
     <div className="mx-auto my-10 grid max-w-screen-xl grid-cols-7 gap-5 max-2xl:flex max-2xl:flex-col max-2xl:px-2">
       <div className="col-span-5 flex flex-col gap-6">
         <div className="flex flex-col gap-2">
-          <Image className="aspect-[5/3] xl:aspect-[7/3] w-full object-cover" src={data.metadata.src.url} alt={data.title} width={2000} height={2000} priority />
+          <Image className="aspect-[5/3] w-full object-cover xl:aspect-[7/3]" src={data.metadata.src.url} alt={data.title} width={2000} height={2000} priority />
           <p className="text-right text-sm text-gray-500">
             Published on {new Date(data.published_at).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' })}
           </p>
         </div>
         <h1 className="text-3xl font-bold">{data.title}</h1>
-        <p dangerouslySetInnerHTML={{ __html: data.metadata.content }} className="" />
+        <p dangerouslySetInnerHTML={{ __html: data.metadata.content }} className="*:list-inside *:list-disc *:[&>ul]:ps-8" />
       </div>
       <hr className="2xl:hidden" />
       <div className="col-span-2 flex flex-col gap-4">
         <h2 className="text-xl/snug font-semibold">Recent Blogs</h2>
-        <hr className='max-2xl:hidden'/>
+        <hr className="max-2xl:hidden" />
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 2xl:flex 2xl:flex-col">
           {recent &&
             recent.map((blog, idx) =>
               blog.id !== id ? (
-                <div key={idx} className='h-full'>
+                <div key={idx} className="h-full">
                   <BlogCard id={blog.id} title={blog.title} imgSrc={blog.metadata.src.url} publishedAt={blog.published_at} />
                 </div>
               ) : null

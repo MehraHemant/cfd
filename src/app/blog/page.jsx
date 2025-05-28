@@ -5,8 +5,8 @@ import { createBucketClient } from '@cosmicjs/sdk';
 import Image from 'next/image';
 export default async function Page() {
   const cosmic = createBucketClient({
-    bucketSlug: 'cfd-production',
-    readKey: 'wK1z1cMsX2l4xBGGJ7VeXrlhiJKcAVYexYQvGpc7n7FD9d18tD',
+    bucketSlug: process.env.NEXT_PUBLIC_COSMICJS_BUCKET_SLUG,
+    readKey: process.env.NEXT_PUBLIC_COSMICJS_READ_KEY,
   });
 
   const response = await cosmic.objects.find({ type: 'blogs' }).limit(10).props('id,slug,title,metadata,type,published_at').depth(1).sort('-1');
