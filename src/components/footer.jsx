@@ -38,13 +38,13 @@ export function Footer() {
           </span>
           <a href="tel:+911204151246">+91 120 415 1246</a>
         </div>
-        <span className=" max-sm:hidden block">|</span>
-        <div className="flex items-center gap-2 max-sm:gap-1 ">
+        {/* <span className=" max-sm:hidden block">|</span> */}
+        {/* <div className="flex items-center gap-2 max-sm:gap-1 ">
           <span className="h-5 w-5 max-sm:h-4 max-sm:w-4">
             <PhoneCallIcon />
           </span>
           <a href="tel:+917303488667">+91 7303488667</a>
-        </div>
+        </div> */}
       </div>
       <address className="mx-auto w-fit text-center px-3 max-sm:text-sm/tight font-light">
         Unit 901, Tower B, ITHUMB TOWER, Block A, Industrial Area Sector 62,
@@ -57,7 +57,7 @@ export function Footer() {
         <Link href="https://www.instagram.com/vistaar_media/?igsh=MWY1aDZzbTY0ZHBucw%3D%3D" target="_blank" className="w-6 h-6">
           <InstagramIcon />
         </Link>
-        <Link href="https://www.facebook.com/profile.php?id=100077792111018" target="_blank" className="w-5 h-5">
+        <Link href="https://www.facebook.com/share/1F3GSbyctV/" target="_blank" className="w-5 h-5">
           <FacebookIcon />
         </Link>
       </div>
