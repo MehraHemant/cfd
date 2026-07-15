@@ -127,19 +127,11 @@ export default function Home() {
 
       {/* Clients Section */}
       <section id="clients" className="bg-white pb-4">
-        <Heading title={'Clients'} primary />
-        <div className="*:object-fit *:grow-1 mx-auto mt-4 flex max-w-screen-lg flex-wrap items-center justify-center gap-12 rounded-2xl border border-primary px-6 py-8 *:w-40 max-md:mx-2 max-md:py-4 max-sm:gap-x-4 max-sm:gap-y-2.5 max-sm:px-3 max-sm:*:w-1/4">
-          <Image priority width={100} height={100} src="/images/clients/avon_cycles.png" alt="avon-cycles" />
-          <Image priority width={100} height={100} src="/images/clients/bonn.png" alt="bonn" />
-          <Image priority width={100} height={100} src="/images/clients/kurlon.png" alt="kurlon" />
-          <Image priority width={100} height={100} src="/images/clients/rungtas.png" alt="rungtas" />
-          <Image priority width={100} height={100} src="/images/clients/lqintimo.png" alt="lqintimo" />
-          <Image priority width={100} height={100} src="/images/clients/myntra.png" alt="myntra" />
-          <Image priority width={100} height={100} src="/images/clients/bazaar_kolkata.png" alt="bazaar-kolkata" />
-          <Image priority width={100} height={100} src="/images/clients/ikea.png" alt="ikea" />
-          <Image priority width={100} height={100} src="/images/clients/livfast.png" alt="livfast" />
-          <Image priority width={100} height={100} src="/images/clients/girdhar.png" alt="girdhar" />
-          <Image priority width={100} height={100} src="/images/clients/colorbar.png" alt="colorbar" />
+        <Heading title={'Partners'} primary />
+        <div className="*:object-fit *:grow-1 mx-auto mt-4 flex max-w-screen-2xl flex-wrap items-center justify-center gap-2 rounded-2xl border border-primary p-4 *:w-40 ">
+          {Array.from({ length: 32 }, (_, i) => i + 1).map((num) => (
+            <Image key={num} priority width={200} height={200} src={`/images/clients/${num}.png`} alt={`client-${num}`} className='object-contain' />
+          ))}
         </div>
       </section>
 
